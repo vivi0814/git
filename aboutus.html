@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
+    <style>
+        *{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrap{
+            width: 100%;
+            background-color: rgba(251, 249, 236, 1);
+        }
+        .wrap-header{
+            background-color: rgba(186, 204, 174, 1);
+            width: 100%;
+            height: 60px;
+            top:0px;
+            position: fixed;
+            z-index: 10;
+        }
+        .header{
+            margin: auto;
+            width: 1200px;
+            height: 60px;
+            top: 0px;
+        }
+        .logo{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 5px;
+            left: 180px;
+        }
+        .logo img{
+            width: 100%;
+        }
+        .icon-top{
+            display: flex;
+            flex-wrap: wrap;
+            top: 0px;
+            right: 160px;
+            position: absolute;
+        }
+        .icon-top li:nth-child(1) i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            content: "\f002";
+            font-size: 18px;
+            color: rgba(103, 103, 103, 1);
+        }
+        .icon-top li:nth-child(2) i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f07a";
+            font-size: 18px;
+            color: rgba(103, 103, 103, 1);
+        }
+        .icon-top li:nth-child(3) i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f007";
+            font-size: 18px;
+            color: rgba(103, 103, 103, 1);
+        }
+        .icon-top li:hover{
+            background-color: #fa0;
+            border-radius: 50%;
+        }
+        .main-nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .header .main-nav li a{
+            font-size: 20px;
+            color: rgb(77, 77, 77);
+            font-weight: bold;
+            margin:10px;
+        }
+        .header .main-nav li a:hover{
+            color: rgb(225, 95, 8);
+        } 
+        .header .main-nav li a img{
+            width: 15%;
+            margin: auto;
+            padding-right: 10px;
+        }
+        li{
+            margin: 10px;
+        }
+        .wrap{
+            padding-top: 60px;
+        }
+        .content{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content h1{
+            width: 1200px;
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(67, 66, 66);
+            padding-top: 50px;
+            margin-left: 50px;
+        }
+        .item{
+            display: flex;
+            padding: 20px;
+            
+        }
+        .content .item:nth-child(2n){
+            flex-direction: row-reverse;
+        }
+        .item .pic{
+            width: 50%;
+            margin: auto;
+        }
+        .item .pic img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .item .title{
+            width: 50%;
+            font-size: 18px;
+            margin: auto;
+            line-height: 1.6;
+            text-align: left;
+
+        }
+        .content .item:nth-child(2) .title{
+            width: 45%;
+            background-color: rgba(210, 221, 197, 1);
+            padding: 30px;
+            padding-left: 80px;
+            
+        }
+        .content .item:nth-child(3) .title{
+            background-color: rgba(253, 230, 189, 0.8);
+            width: 40%;
+            margin-right: 70px;
+            padding: 10px;
+            padding-left: 30px;
+        }
+        .content .item:nth-child(3) .pic{
+            width: 58%;
+            margin-left: 70px;
+            
+        }
+        .content .item:nth-child(4) .title{
+            background-color:  rgba(223, 183, 157, 1);
+            margin-left: 200px;
+            height: 200px;
+            display: flex;
+            text-align: left;
+            padding-left: 30px;
+            align-items: center;
+        }
+        .content .item:nth-child(4) .pic{
+            margin-right: 50px;
+        }
+
+        .content .item:nth-child(5) .title{
+            background-color: rgba(163, 171, 140, 0.8);
+            margin-right: 150px;
+            padding: 50px;
+            padding-left: 70px;
+        }
+        .content .item:nth-child(5) .pic{
+            margin-left: 70px;
+        }
+        .footer{
+            width: 100%;
+            background-color: rgba(186, 204, 174, 1);
+        }
+        .footer-head{
+            display: flex;
+            width: 1200px;
+        }
+        .footer-item{
+            width: 0;
+            flex-grow: 1;
+            margin:10px;
+        }
+        .footer-item h3{
+            font-size: 18px;
+            color:rgb(61, 61, 61);
+            margin: 10px;
+        }
+        .footer-item a{
+            color:rgb(61, 61, 61);
+        }
+        .footer-item nav{
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+        }
+        .footer-item nav a{
+            font-size: 16px;
+            color:rgb(74, 74, 74);
+            margin: 5px;
+        }
+        .copyright{
+            text-align:center;
+            width: 100%;
+            color: #8a8a8a;
+        }
+        .footer-item-icon{
+            height: 60px;
+            margin: auto;
+            padding: 20px;
+        }
+        .footer-item-icon a:nth-child(1){
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f09a";
+            font-size: 50px;
+            color: rgb(126, 126, 126);
+            margin: 20px;
+        }
+        .footer-item-icon a:nth-child(2){
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f16d";
+            font-size: 50px;
+            color: rgb(126, 126, 126);
+            margin: 20px;
+        }
+        .footer-item-icon a:nth-child(3){
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f3c0";
+            font-size: 50px;
+            color: rgb(126, 126, 126);
+            margin: 20px;
+        }
+        .footer-item-logo{
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            margin-right: 20px;
+        }
+        .footer-item-logo img{
+            width: 100%;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap-header">
+            <div class="logo">
+                <a href="head.html">
+                    <img src="./head/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header">
+                <ul class="icon-top">
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="main-nav">
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">熱銷排行榜</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">產品分類</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">門市據點</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">最新消息</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>關於素拾</h1>
+            <div class="item">
+                <div class="pic">
+                    <img src="./aboutus/banner1.jpg" alt="">
+                </div>
+                <div class="title">
+                    <p>近年來，環境遭到人類大肆地破壞，其中，畜牧養殖業排出的溫室氣體高達全球18% !<br><br>研究顯示，要製造等量的蛋白質，生產牛肉消耗的水比大豆或扁豆高達六倍之多。<br><br>為了保護我們的地球，素拾致力於提倡環保活動，宣揚健康並且對環境友善的飲食習慣。</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="./aboutus/1.jpg" alt="">
+                </div>
+                <div class="title">
+                    <p>
+                        提到減碳飲食，<br>
+                        最多人響應的就是「少肉多蔬」，<br>
+                        <br>
+                        希望藉由飲食來達到健康的目的，<br>
+                        減少二氧化碳排放，讓身體更沒有負擔。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="./aboutus/2.jpg" alt="">
+                </div>
+                <div class="title">
+                    <p>
+                        素拾相信，<br>
+                        吃素可以是輕鬆又簡單的選擇，<br>
+                        清晰且堅持的素拾理念，<br>
+                        不代表要犧牲享受美食的機會，<br>
+                        堅定地要給大家美好的素食產品。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="./aboutus/3.jpg" alt="">
+                </div>
+                <div class="title">
+                    <p>
+                        素食風潮也在好萊塢蔓延，<br>
+                        跟上素食的風潮，「少肉食，減暖化」，<br>
+                        希望素拾能影響大家，一起改變飲食習慣，<br>
+                        不僅吃得健康，同時減碳救地球。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content">
+                <div class="footer-head">
+                    <div class="footer-item">
+                        <h3><a href="aboutus.html"> 關於我們</a></h3>
+                        <nav>
+                            <a href="aboutus.html">品牌故事</a>
+                            <a href="place.html">門市據點</a>
+                        </nav>
+                    </div>
+                    <div class="footer-item">
+                        <h3>購物說明</h3>
+                        <nav>
+                            <a href="#">付款方式</a>
+                            <a href="#">運送方式</a>
+                        </nav>
+                    </div>
+                    <div class="footer-item">
+                        <h3>客服資訊</h3>
+                        <nav>
+                            <a href="">信箱留言</a>
+                            <a href="">聯絡我們</a>
+                        </nav>
+                    </div>
+                    <div class="footer-item-icon">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-line"></i></a>
+                    </div>
+                    <div class="footer-item-logo">
+                        <a href="head.html">
+                            <img src="./head/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright &copy;2022 緯育前端工程師職業培訓班
+                </div>
+            </div>
+        </div>
+
+
+        
+</body>
+</html>

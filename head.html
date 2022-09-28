@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrap{
+            width: 100%;
+            background-color: rgba(251, 249, 236, 1);
+        }
+        .wrap-header{
+            background-color: rgba(186, 204, 174, 1);
+            width: 100%;
+            height: 60px;
+            top:0px;
+            position: fixed;
+            z-index: 10;
+        }
+        .header{
+            margin: auto;
+            width: 1200px;
+            height: 60px;
+            top: 0px;
+        }
+        .logo{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 5px;
+            left: 180px;
+        }
+        .logo img{
+            width: 100%;
+        }
+        .icon-top{
+            display: flex;
+            flex-wrap: wrap;
+            top: 0px;
+            right: 160px;
+            position: absolute;
+        }
+        .icon-top li:nth-child(1) i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            content: "\f002";
+            font-size: 18px;
+            color: rgba(103, 103, 103, 1);
+        }
+        .icon-top li:nth-child(2) i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f07a";
+            font-size: 18px;
+            color: rgba(103, 103, 103, 1);
+        }
+        .icon-top li:nth-child(3) i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f007";
+            font-size: 18px;
+            color: rgba(103, 103, 103, 1);
+        }
+        .icon-top li:hover{
+            background-color: #fa0;
+            border-radius: 50%;
+        }
+        .main-nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .header .main-nav li a{
+            font-size: 20px;
+            color: rgb(77, 77, 77);
+            font-weight: bold;
+            margin:10px;
+        }
+        .header .main-nav li a:hover{
+            color: rgb(225, 95, 8);
+        } 
+        .header .main-nav li a img{
+            width: 15%;
+            margin: auto;
+            padding-right: 10px;
+        }
+        li{
+            margin: 10px;
+        }
+        .wrap{
+            padding-top: 60px;
+        }
+        .banner{
+            width: 100%;
+            height: 650px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            margin: auto;
+        }
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            color: rgba(186, 204, 174, 1);
+        }
+        .section-first{
+            width: 100%;
+            margin: auto;
+            background-color: rgba(210, 221, 197, 0.68);
+        }
+        .section-second{
+            width: 100%;
+            margin: auto;
+        }
+        .content{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .introduce{
+            width: 50%;
+        }
+        .introduce h2{
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(67, 66, 66);
+            margin: 30px;
+            margin-left: 50px;
+        }
+        .introduce-mush h2{
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(67, 66, 66);
+            margin-top: 90px;
+            margin-right: 200px;
+            text-align: center;
+        }
+        .introduce p{
+            /* 內文設定 */
+            font-size: 26px;
+            color: rgb(67, 66, 66);
+            letter-spacing: 3px;
+            line-height: 35px;
+            margin: 10px;
+            margin-left: 50px;
+            padding: 20px;
+        }
+        .introduce-mush p{
+            font-size: 26px;
+            color: rgb(67, 66, 66);
+            letter-spacing: 3px;
+            line-height: 35px;
+            margin-top: 60px;
+            padding: 20px;
+        }
+        .price-cart-buy{
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            margin-left: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .introduce-mush .price-cart-buy{
+            justify-content: end;
+            margin-top: 80px;
+        }
+        .price-cart-buy .price{
+            color: rgb(255, 24, 24);
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Yaldevi', sans-serif;
+            margin: 10px;
+        }
+        .price-cart-buy .cart::before{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f07a";
+            font-size: 25px;
+            color: rgba(103, 103, 103, 1);
+        }
+        .price-cart-buy .cart{
+            /* 購物車按鈕 */
+            width: 50px;
+            height: 50px;
+            background-color: rgba(241, 220, 165, 1);
+            border-radius: 5px;
+            margin: 20px;
+            border: none;
+            box-shadow: 2px 2px 2px 0px #a8a8a8;
+            transition: .3s;
+        }
+        .price-cart-buy .cart:hover{
+            background-color: rgb(250, 207, 98);
+            transform: scale(1.05);
+        }
+        .price-cart-buy .cart:active {
+            transform: scale(1);
+            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+        }
+        .price-cart-buy .buy{
+            /* 一般按鈕 */
+            width: 100px;
+            height: 50px;
+            background-color: rgba(255, 215, 114, 1);
+            border-radius: 5px;
+            margin: 20px;
+            border: none;
+            box-shadow: 2px 2px 2px 0px #909090; 
+            transition: .3s;
+        }
+        .price-cart-buy .buy:hover{
+            background-color: rgb(255, 183, 0);
+            transform: scale(1.05);
+        }
+        .price-cart-buy .buy:active {
+            transform: scale(1);
+            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+        }
+        .price-cart-buy .buy a{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .intro-pic{
+            width: 50%;
+        }
+        .intro-pic img{
+            margin: 50px;
+            width: 80%;
+            height: 80%;
+            border-radius: 5%;
+            transition:1s; 
+            transform: rotate(0deg);
+        }
+        .intro-pic img:hover{
+            transition:.8s; 
+            transform: rotate(2deg);
+        }
+        .hot-head{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+
+            background-color:rgba(210, 221, 197, 0.68) ;
+        }
+        .hot-head h2{
+            width: 100%;
+            font-size: 36px;
+            font-weight: bold;
+            color: rgb(67, 66, 66);
+            margin-top: 20px;
+            text-align: center;
+        }
+        .hot-more{
+            width: 100%;
+            font-size: 18px;
+            text-align: right;
+        }
+        .hot-more a{
+            color: rgb(96, 96, 96) ;
+        }
+        .flex-head{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-bottom: 20px;
+        }
+        .item-head{
+            margin: 10px;
+            padding: 10px;
+        }
+        .item-head-touch{
+            position: relative;
+        }
+        .pic-head{
+            width: 100%;
+        }
+        .pic-head img{
+            width: 100%;
+            height: 300px;
+            vertical-align: top;
+            border-radius: 5px;
+        }
+        .big-cart{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+            background-color: #00000065;
+            opacity: 0;
+            position: absolute;
+            transition: 0.5s;
+            z-index: 1;
+        }
+        .big-cart:hover{
+            opacity: 1;
+        }
+        .big-cart .big::before{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            content: "\f002";
+            font-size: 40px;
+            color: rgb(190, 190, 190);
+            margin: 10px;
+        }
+        .big-cart .cart::before{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            content: "\f07a";
+            font-size: 40px;
+            color: rgb(190, 190, 190);
+            margin: 10px;
+        }
+        .item-head .product-title{
+            margin: 8px;
+            font-size: 22px;
+            color: rgb(67, 66, 66);
+        }
+        .price-hot{
+            margin: 8px;
+            font-size: 26px;
+            color: rgb(255, 24, 24);
+            font-weight: bold;
+            font-family: 'Yaldevi', sans-serif;
+        }
+        .place{
+            width: 100%;
+        }
+        .place h2{
+            width: 100%;
+            font-size: 36px;
+            font-weight: bold;
+            color: rgb(67, 66, 66);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .place-taiwan{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding: 10px;
+        }
+        .place-taiwan img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 5px;
+            transition: .5s;
+        }
+        .place-taiwan img:hover{
+            transform: scale(1.05);
+        }
+        .place-taipei{
+            overflow: hidden;
+            margin: 20px;
+        }
+        .place-taipei p{
+            text-align: center;
+            font-size: 20px;
+            margin: 10px;
+            color:rgb(96, 96, 96) ;
+            font-weight: bold;
+        }
+        .place-taipei a{
+            position: relative;
+        }
+        
+        .place-taipei a::after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: -10px;
+            height: 0;
+            border-bottom: 1px solid rgb(74, 74, 74);
+            transition: 0.5s;
+        }
+        .place-taipei a:hover::after{
+            left: 0%;
+            right: 0%;
+        }
+        .footer{
+            width: 100%;
+            background-color: rgba(186, 204, 174, 1);
+        }
+        .footer-head{
+            display: flex;
+            width: 1200px;
+        }
+        .footer-item{
+            width: 0;
+            flex-grow: 1;
+            margin:10px;
+        }
+        .footer-item h3{
+            font-size: 18px;
+            color:rgb(61, 61, 61);
+            margin: 10px;
+        }
+        .footer-item a{
+            color:rgb(61, 61, 61);
+        }
+        .footer-item nav{
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+        }
+        .footer-item nav a{
+            font-size: 16px;
+            color:rgb(74, 74, 74);
+            margin: 5px;
+        }
+        .copyright{
+            text-align:center;
+            width: 100%;
+            color: #8a8a8a;
+        }
+        .footer-item-icon{
+            height: 60px;
+            margin: auto;
+            padding: 20px;
+        }
+        .footer-item-icon a:nth-child(1){
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f09a";
+            font-size: 50px;
+            color: rgb(126, 126, 126);
+            margin: 20px;
+        }
+        .footer-item-icon a:nth-child(2){
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f16d";
+            font-size: 50px;
+            color: rgb(126, 126, 126);
+            margin: 20px;
+        }
+        .footer-item-icon a:nth-child(3){
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f3c0";
+            font-size: 50px;
+            color: rgb(126, 126, 126);
+            margin: 20px;
+        }
+        .footer-item-logo{
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            margin-right: 20px;
+        }
+        .footer-item-logo img{
+            width: 100%;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap-header">
+            <div class="logo">
+                <a href="head.html">
+                    <img src="./head/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header">
+                <ul class="icon-top">
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="main-nav">
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">熱銷排行榜</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">產品分類</a>
+                    </li>
+                    <li>
+                        <a href="place.html"><img src="./head/icon-leaves.png" alt="">門市據點</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">最新消息</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="">
+                        <img src="./head/dumplings2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                        <img src="./head/sauce2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                        <img src="./head/mushroom2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                        <img src="./head/sausage2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                        <img src="./head/市集.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                        <img src="./head/市集2.jpg" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                  loop: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+              </script>
+        </div>
+        <section class="section-first">
+            <div class="content">
+                <div class="introduce">
+                    <h2>天香麻辣醬</h2>
+                    <p> 辣而不嗆 <br>
+                        麻而不躁 <br>
+                        濃而不膩 <br>
+                    </p>
+                    <p>
+                        讓你感受到不同辣椒產生的撞擊，<br>
+                        讓你多了一份想吃的衝動，<br>
+                        讓你深留在記憶裡的味道。
+                    </p>
+                    <div class="price-cart-buy">
+                        <p class="price">NT$230</p>
+                        <button class="cart"></button>
+                        <button class="buy">
+                            <a href="">
+                                立即購買
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="intro-pic">
+                    <img src="./head/spicy.jpeg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-second">
+            <div class="content">
+                <div class="intro-pic">
+                    <img src="./head/m2.jpg" alt="">
+                </div>
+                <div class="introduce-mush">
+                    <h2>老薑麻油猴頭菇</h2>
+                    <p>
+                        嚴選特級優質猴頭菇<br>
+                        以中藥材與特級麻油長時間燉煮<br>
+                        每一口都嚐的到猴頭菇與湯頭的精華
+                    </p>
+                    <div class="price-cart-buy">
+                        <p class="price">NT$250</p>
+                        <button class="cart"></button>
+                        <button class="buy">
+                            <a href="">
+                                立即購買
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <figure class="hot-head">
+            <div class="content">
+                <h2>熱銷排行榜</h2>
+                <div class="hot-more">
+                    <a href="">
+                        看更多熱賣商品...
+                    </a>
+                </div>
+                <figcaption class="flex-head">
+                    <div class="item-head">
+                        <div class="item-head-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-head">
+                                <img src="./head/sauce-head2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            鮮蔬番茄野菇醬(270g/包)
+                        </div>
+                        <div class="price-hot">
+                            <p class="price">NT$180</p>
+                        </div>
+                    </div>
+                    <div class="item-head">
+                        <div class="item-head-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-head">
+                                <img src="./head/bun-head.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            藜麥素食養生包(10顆/包)
+                        </div>
+                        <div class="price-hot">
+                            <p class="price">NT$200</p>
+                        </div>
+                    </div>
+                    <div class="item-head">
+                        <div class="item-head-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-head">
+                                <img src="./head/dum-head.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            珍饌水餃-韭菜口味(30顆)
+                        </div>
+                        <div class="price-hot">
+                            <p class="price">NT$250</p>
+                        </div>
+                    </div>
+                    <div class="item-head">
+                        <div class="item-head-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-head">
+                                <img src="./head/spicy-head2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            麻辣雙椒 (250g/罐)
+                        </div>
+                        <div class="price-hot">
+                            <p class="price">NT$230</p>
+                        </div>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        <div class="place">
+            <div class="content">
+                <h2>門市據點</h2>
+                <div class="place-taiwan">
+                    <div class="place-taipei">
+                        <a href="place.html">
+                            <img src="./head/place2.jpg" alt="">
+                            <p>板橋創始店</p>
+                        </a>
+                    </div>
+                    <div class="place-taipei">
+                        <a href="place.html">
+                            <img src="./head/place3.png" alt="">
+                            <p>台中中港店</p>
+                        </a>
+                    </div>
+                    <div class="place-taipei">
+                        <a href="place.html">
+                            <img src="./head/place4.jpg" alt="">
+                            <p>高雄漢神店</p>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content">
+                <div class="footer-head">
+                    <div class="footer-item">
+                        <h3><a href="aboutus.html">關於我們</a></h3>
+                        <nav>
+                            <a href="aboutus.html">品牌故事</a>
+                            <a href="place.html">門市據點</a>
+                        </nav>
+                    </div>
+                    <div class="footer-item">
+                        <h3>購物說明</h3>
+                        <nav>
+                            <a href="#">付款方式</a>
+                            <a href="#">運送方式</a>
+                        </nav>
+                    </div>
+                    <div class="footer-item">
+                        <h3>客服資訊</h3>
+                        <nav>
+                            <a href="">信箱留言</a>
+                            <a href="">聯絡我們</a>
+                        </nav>
+                    </div>
+                    <div class="footer-item-icon">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-line"></i></a>
+                    </div>
+                    <div class="footer-item-logo">
+                        <a href="head.html">
+                            <img src="./head/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright &copy;2022 緯育前端工程師職業培訓班
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
