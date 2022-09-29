@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>素拾</title>
+    <title>素拾產品分類</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
-    
     <style>
         *{
             list-style: none;
@@ -173,99 +170,149 @@
         .wrap{
             padding-top: 60px;
         }
-        .banner{
-            width: 100%;
-            height: 650px;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            margin: auto;
-        }
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: bottom;
-        }
-        .swiper-button-next, .swiper-button-prev{
-            color: rgba(186, 204, 174, 1);
-        }
-        .section-first{
-            width: 100%;
-            margin: auto;
-            background-color: rgba(210, 221, 197, 0.68);
-        }
-        .section-second{
-            width: 100%;
-            margin: auto;
-        }
         .content{
             width: 1200px;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
+            position: relative;
         }
-        .introduce{
-            width: 50%;
+        .bread{
+            width: 1200px;
+            display: flex;
+            padding-top: 30px;
+            margin-left: 30px;
         }
-        .introduce h2{
-            font-size: 40px;
-            font-weight: bold;
-            color: rgb(67, 66, 66);
+        .bread li{
+            font-size: 16px;
+            color: #8f8f8f;
+        }
+        .bread li a{
+            font-size: 16px;
+            color: #8f8f8f;
+        }
+        .bread li a i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f054";
+            margin-right: 10px;
+        }
+        .side-menu{
             margin: 30px;
-            margin-left: 50px;
+            width: 150px;
+            height: 300px;
+            flex-direction: column;
+            border-radius: 5px;
+            background-color: #D2DDC5;
+            position: sticky;
+            top: 110px;
         }
-        .introduce-mush h2{
+        .side-menu-item .category-rice{
+            transform: scale(1.05);
+        }
+        .side-menu .side-menu-item i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f4d8";
+            font-size: 14px;
+            color: green;
+            display: inline-block;
+        }
+        .side-menu a{
+            margin: 20px;
+            text-align: left;
+            display: block;
+            font-size: 18px;
+            color: rgb(77, 77, 77);
+        }
+        .side-menu a:hover{
+            color:rgb(225, 95, 8);
+        }
+        .side-menu .side-menu-item a{
+            margin-left: 30px;
+            font-size: 18px;
+            
+        }
+        .side-menu .side-menu-item a:hover{
+            transform: scale(1.05);
+        }
+        .side-menu .side-menu-item a i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f4d8";
+            font-size: 14px;
+            display: none;
+        }
+        .side-menu .side-menu-item a:hover>i{
+            color: green;
+            display: inline-block;
+        }
+        .grid-product{
+            padding-top: 5px;
+            width: 960px;
+            /* height: 2000px; */
+            display: flex;
+            flex-wrap: wrap;
+            /* outline: 1px solid blue; */
+        }
+        .pro-item-detail{
+            /* outline: 5px solid red; */
+            width: 960px;
+            display: flex;
+        }
+        .pro-item-detail .pro-item-detail-pic{
+            width:500px;
+            /* height: 700px; */
+            height: 100%;
+            padding: 30px;
+            outline: 7px solid green;
+        }
+        .pro-item-detail-pic img{
+            width: 100%;
+            margin: 20px;
+        }
+        .pro-detail-txt{
+            margin: 20px;
+            padding-top: 50px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            /* outline: 1px solid blue; */
+        }
+        .pro-detail-txt h2{
+            width: 100%;
+            letter-spacing: 2px;
             font-size: 40px;
-            font-weight: bold;
-            color: rgb(67, 66, 66);
-            margin-top: 90px;
-            margin-right: 200px;
             text-align: center;
+            padding: 20px 0px;
         }
-        .introduce p{
-            /* 內文設定 */
-            font-size: 26px;
-            color: rgb(67, 66, 66);
+        .pro-detail-price{
+            width: 100%;
+            margin-top: 30px;
+            padding: 20px 0px;
             letter-spacing: 3px;
-            line-height: 35px;
-            margin: 10px;
-            margin-left: 50px;
-            padding: 20px;
+            color: rgb(255, 24, 24);
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Yaldevi', sans-serif;
+            text-align: center;
+            /* outline: 1px solid blue; */
         }
-        .introduce-mush p{
-            font-size: 26px;
-            color: rgb(67, 66, 66);
-            letter-spacing: 3px;
-            line-height: 35px;
-            margin-top: 60px;
-            padding: 20px;
+        .pro-detail-amount{
+            width: 100%;
+            padding: 20px 0px;
+            text-align: center;
+            font-size: 30px;
+            
         }
         .price-cart-buy{
             display: flex;
             flex-wrap: wrap;
-            width: 80%;
-            margin-left: 30px;
+            width: 100%;
             justify-content: center;
             align-items: center;
-        }
-        .introduce-mush .price-cart-buy{
-            justify-content: end;
-            margin-top: 80px;
-        }
-        .price-cart-buy .price{
-            color: rgb(255, 24, 24);
-            font-size: 25px;
-            font-weight: bold;
-            font-family: 'Yaldevi', sans-serif;
-            margin: 10px;
+            /* outline: 1px solid blue; */
         }
         .price-cart-buy .cart::before{
             font-family: "Font Awesome 6 Free"; 
@@ -280,7 +327,7 @@
             height: 50px;
             background-color: rgba(241, 220, 165, 1);
             border-radius: 5px;
-            margin: 20px;
+            margin: 40px;
             border: none;
             box-shadow: 2px 2px 2px 0px #a8a8a8;
             transition: .3s;
@@ -299,7 +346,7 @@
             height: 50px;
             background-color: rgba(255, 215, 114, 1);
             border-radius: 5px;
-            margin: 20px;
+            margin: 40px;
             border: none;
             box-shadow: 2px 2px 2px 0px #909090; 
             transition: .3s;
@@ -316,71 +363,71 @@
             font-size: 18px;
             font-weight: bold;
         }
-        .intro-pic{
-            width: 50%;
-        }
-        .intro-pic img{
-            margin: 50px;
-            width: 80%;
-            height: 80%;
-            border-radius: 5%;
-            transition:1s; 
-            transform: rotate(0deg);
-        }
-        .intro-pic img:hover{
-            transition:.8s; 
-            transform: rotate(2deg);
-        }
-        .hot-head{
-            display: flex;
-            flex-wrap: wrap;
-            padding: 30px;
-            background-color:rgba(210, 221, 197, 0.68) ;
-        }
-        .hot-head h2{
-            width: 100%;
-            font-size: 36px;
-            font-weight: bold;
-            color: rgb(67, 66, 66);
-            margin-top: 20px;
-            text-align: center;
-        }
-        .hot-more{
-            width: 100%;
-            font-size: 18px;
-            text-align: right;
-        }
-        .hot-more a{
-            color: rgb(96, 96, 96) ;
-        }
-        .flex-head{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            margin-bottom: 20px;
-        }
-        .item-head{
-            margin: 10px;
-            padding: 10px;
-        }
-        .item-head-touch{
-            position: relative;
-        }
-        .pic-head{
-            width: 100%;
-        }
-        .pic-head img{
-            width: 100%;
-            height: 300px;
-            vertical-align: top;
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .item-product{
+            width: 250px;
+            height: 330px;
+            margin: auto;
             border-radius: 5px;
+            box-shadow: 2px 2px 2px 0px #c9c9c9;
+            outline: 1px solid blue;
+        }
+        .pic-pro{
+            width: 100%;
+            height: 260px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px 5px 0px 0px;
+            overflow: hidden;
+        }
+        .item-product .pic-pro img{
+            border-radius: 5px 5px 0px 0px;
+            width: 100%;
+            height: 100%;
+            vertical-align:center;
+            object-fit:cover;
+            object-position: center center;
+            transition: 0.8s;
+        }
+        .item-product:hover img{
+            transform: scale(1.1);
+        }
+        .item-product .title{
+            padding: 2px;
+            margin: 8px;
+            font-size: 20px;
+            color: rgb(67, 66, 66);
+        }
+        .item-product .price{
+            padding: 2px;
+            margin: 8px;
+            font-size: 22px;
+            color: rgb(255, 24, 24);
+            font-weight: bold;
+            font-family: 'Yaldevi', sans-serif;
+        }
+        .item-pro-touch{
+            position: relative;
         }
         .big-cart{
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 300px;
+            height: 260px;
+            border-radius: 5px 5px 0px 0px;
             background-color: #00000065;
             opacity: 0;
             position: absolute;
@@ -406,76 +453,23 @@
             color: rgb(190, 190, 190);
             margin: 10px;
         }
-        .item-head .product-title{
-            margin: 8px;
-            font-size: 22px;
-            color: rgb(67, 66, 66);
-        }
-        .price-hot{
-            margin: 8px;
-            font-size: 26px;
-            color: rgb(255, 24, 24);
-            font-weight: bold;
-            font-family: 'Yaldevi', sans-serif;
-        }
-        .place{
-            width: 100%;
-        }
-        .place h2{
-            width: 100%;
-            font-size: 36px;
-            font-weight: bold;
-            color: rgb(67, 66, 66);
-            margin-top: 20px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .place-taiwan{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
+        .bottom-product{
+            width: 1200px;
+            height: 400px;
+            margin: auto;
             padding: 10px;
         }
-        .place-taiwan img{
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            object-position: center center;
-            border-radius: 5px;
-            transition: .5s;
+        .swiper {
+            height: 100%;
         }
-        .place-taiwan img:hover{
-            transform: scale(1.05);
+        .swiper-slide {
+            display: flex;
         }
-        .place-taipei{
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 20px;
+        .swiper-button-next, .swiper-button-prev{
+            color:rgb(250, 207, 98);
         }
-        .place-taipei p{
-            text-align: center;
-            font-size: 20px;
-            margin: 10px;
-            color:rgb(96, 96, 96) ;
-            font-weight: bold;
-        }
-        .place-taipei a{
-            position: relative;
-        }
-        
-        .place-taipei a::after{
-            content: '';
-            position: absolute;
-            left: 50%;
-            right: 50%;
-            bottom: -10px;
-            height: 0;
-            border-bottom: 1px solid rgb(74, 74, 74);
-            transition: 0.5s;
-        }
-        .place-taipei a:hover::after{
-            left: 0%;
-            right: 0%;
+        .swiper-pagination-bullet{
+            background: rgb(250, 207, 98);
         }
         .footer{
             width: 100%;
@@ -554,8 +548,8 @@
 
         
         
+        </style>
 
-    </style>
 </head>
 <body>
     <div class="wrap">
@@ -608,219 +602,202 @@
                 </ul>
             </div>
         </div>
-        <div class="banner">
+        <div class="content">
+            <ol class="bread">
+                <li>產品分類</li>
+                <li><a href="rice.html"><i class="fa-regular fa-chevron-right"></i>主食類</a></li>
+
+            </ol>
+            <div class="side-menu">
+                <nav>
+                    <a href="./hot.html" class="hot-title">熱銷排行榜</a>
+                    <ul><a href="" class="category">產品分類</a>
+                    <li class="side-menu-item">
+                        <a href="rice.html" class="category-rice"><i class="fa-regular fa-seedling"></i>主食類</a>
+                        <a href=""><i class="fa-regular fa-seedling"></i>素料理</a>
+                        <a href=""><i class="fa-regular fa-seedling"></i>拌醬類</a>
+                        <a href=""><i class="fa-regular fa-seedling"></i>湯底</a>
+                        <a href=""><i class="fa-regular fa-seedling"></i>零嘴</a>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="grid-product">
+                <!-- <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="./product-detail/spicy-pro.jpeg" alt=""></div>
+                      <div class="swiper-slide"><img src="./product-detail/spicy-pro2.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="./product-detail/spicy-make.png" alt=""></div>
+                      <div class="swiper-slide"><img src="./product-detail/spicy-make2.jfif" alt=""></div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div> -->
+
+
+
+
+
+                <div class="pro-item-detail">
+                    <div class="pro-item-detail-pic">
+                        <img src="./product-detail/spicy-pro.jpeg" alt="">
+                    </div>
+                    <div class="pro-detail-txt">
+                        <h2>麻辣雙椒 (250g/罐)</h2>
+                        <p class="pro-detail-price">NT$230</p>
+                        <div class="pro-detail-amount">
+                            <p>+ 0 -</p>
+                        </div>
+                        <div class="price-cart-buy">
+                            <button class="cart"></button>
+                            <button class="buy">
+                                <a href="">
+                                    立即購買
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="bottom-product">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="">
-                        <img src="./head/dumplings2.jpg" alt="">
-                    </a>
+                    <div class="item-product">
+                        <div class="item-pro-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-pro">
+                                <img src="./product-rice/mahua-pro2.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="title">
+                            素拾香麻醬拌麵(2包)
+                        </p>
+                        <p class="price">NT$250</p>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <a href="">
-                        <img src="./head/sauce2.jpg" alt="">
-                    </a>
+                    <div class="item-product">
+                        <div class="item-pro-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-pro">
+                                <img src="./product-rice/tofu-pro2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <p class="title">
+                            涮嘴麻婆豆腐(300g/1包)
+                        </p>
+                        <p class="price">NT$160</p>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <a href="">
-                        <img src="./head/mushroom2.jpg" alt="">
-                    </a>
+                    <div class="item-product">
+                        <div class="item-pro-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-pro">
+                                <img src="./product-rice/bun-pro.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="title">
+                            藜麥素食養生包(10顆/包)
+                        </p>
+                        <p class="price">NT$200</p>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <a href="">
-                        <img src="./head/sausage2.jpg" alt="">
-                    </a>
+                    <div class="item-product">
+                        <div class="item-pro-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-pro">
+                                <img src="./product-rice/dum-pro2.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="title">
+                            珍饌水餃-韭菜口味(30顆)
+                        </p>
+                        <p class="price">NT$250</p>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <a href="">
-                        <img src="./head/市集.jpg" alt="">
-                    </a>
+                    <div class="item-product">
+                        <div class="item-pro-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-pro">
+                                <img src="./product-rice/rice-pro.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="title">
+                            養生香菇素粽(5顆)
+                        </p>
+                        <p class="price">NT$230</p>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <a href="">
-                        <img src="./head/市集2.jpg" alt="">
-                    </a>
+                    <div class="item-product">
+                        <div class="item-pro-touch">
+                            <div class="big-cart">
+                                <a href="" class="big"></a>
+                                <a href="" class="cart"></a>
+                            </div>
+                            <div class="pic-pro">
+                                <img src="./product-rice/sau-pro.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="title">
+                            健康素香腸(3條)
+                        </p>
+                        <p class="price">NT$120</p>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-            <script>
-                var swiper = new Swiper(".mySwiper", {
-                  slidesPerView: 1,
-                  spaceBetween: 30,
-                  loop: true,
-                  pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                  },
-                  navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                  },
-                });
-              </script>
         </div>
-        <section class="section-first">
-            <div class="content">
-                <div class="introduce">
-                    <h2>天香麻辣醬</h2>
-                    <p> 辣而不嗆 <br>
-                        麻而不躁 <br>
-                        濃而不膩 <br>
-                    </p>
-                    <p>
-                        讓你感受到不同辣椒產生的撞擊，<br>
-                        讓你多了一份想吃的衝動，<br>
-                        讓你深留在記憶裡的味道。
-                    </p>
-                    <div class="price-cart-buy">
-                        <p class="price">NT$230</p>
-                        <button class="cart"></button>
-                        <button class="buy">
-                            <a href="">
-                                立即購買
-                            </a>
-                        </button>
-                    </div>
-                </div>
-                <div class="intro-pic">
-                    <img src="./head/spicy.jpeg" alt="">
-                </div>
-            </div>
-        </section>
-        <section class="section-second">
-            <div class="content">
-                <div class="intro-pic">
-                    <img src="./head/m2.jpg" alt="">
-                </div>
-                <div class="introduce-mush">
-                    <h2>老薑麻油猴頭菇</h2>
-                    <p>
-                        嚴選特級優質猴頭菇<br>
-                        以中藥材與特級麻油長時間燉煮<br>
-                        每一口都嚐的到猴頭菇與湯頭的精華
-                    </p>
-                    <div class="price-cart-buy">
-                        <p class="price">NT$250</p>
-                        <button class="cart"></button>
-                        <button class="buy">
-                            <a href="">
-                                立即購買
-                            </a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <figure class="hot-head">
-            <div class="content">
-                <h2>熱銷排行榜</h2>
-                <div class="hot-more">
-                    <a href="">
-                        看更多熱賣商品...
-                    </a>
-                </div>
-                <figcaption class="flex-head">
-                    <div class="item-head">
-                        <div class="item-head-touch">
-                            <div class="big-cart">
-                                <a href="" class="big"></a>
-                                <a href="" class="cart"></a>
-                            </div>
-                            <div class="pic-head">
-                                <img src="./head/sauce-head2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="product-title">
-                            鮮蔬番茄野菇醬(270g/包)
-                        </div>
-                        <div class="price-hot">
-                            <p class="price">NT$180</p>
-                        </div>
-                    </div>
-                    <div class="item-head">
-                        <div class="item-head-touch">
-                            <div class="big-cart">
-                                <a href="" class="big"></a>
-                                <a href="" class="cart"></a>
-                            </div>
-                            <div class="pic-head">
-                                <img src="./head/bun-head.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="product-title">
-                            藜麥素食養生包(10顆/包)
-                        </div>
-                        <div class="price-hot">
-                            <p class="price">NT$200</p>
-                        </div>
-                    </div>
-                    <div class="item-head">
-                        <div class="item-head-touch">
-                            <div class="big-cart">
-                                <a href="" class="big"></a>
-                                <a href="" class="cart"></a>
-                            </div>
-                            <div class="pic-head">
-                                <img src="./head/dum-head.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="product-title">
-                            珍饌水餃-韭菜口味(30顆)
-                        </div>
-                        <div class="price-hot">
-                            <p class="price">NT$250</p>
-                        </div>
-                    </div>
-                    <div class="item-head">
-                        <div class="item-head-touch">
-                            <div class="big-cart">
-                                <a href="" class="big"></a>
-                                <a href="" class="cart"></a>
-                            </div>
-                            <div class="pic-head">
-                                <img src="./head/spicy-head2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="product-title">
-                            麻辣雙椒 (250g/罐)
-                        </div>
-                        <div class="price-hot">
-                            <p class="price">NT$230</p>
-                        </div>
-                    </div>
-                </figcaption>
-            </div>
-        </figure>
-        <div class="place">
-            <div class="content">
-                <h2>門市據點</h2>
-                <div class="place-taiwan">
-                    <div class="place-taipei">
-                        <a href="place.html">
-                            <img src="./head/place2.jpg" alt="">
-                            <p>板橋創始店</p>
-                        </a>
-                    </div>
-                    <div class="place-taipei">
-                        <a href="place.html">
-                            <img src="./head/place3.png" alt="">
-                            <p>台中中港店</p>
-                        </a>
-                    </div>
-                    <div class="place-taipei">
-                        <a href="place.html">
-                            <img src="./head/place4.jpg" alt="">
-                            <p>高雄漢神店</p>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="footer">
             <div class="content">
                 <div class="footer-head">
@@ -862,7 +839,28 @@
             </div>
         </div>
     </div>
-
     
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+        </script>
+
 </body>
 </html>

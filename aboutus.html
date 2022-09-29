@@ -33,13 +33,17 @@
             width: 1200px;
             height: 60px;
             top: 0px;
+            z-index: 9;
+            position: relative;
+            
         }
         .logo{
             position: absolute;
             width: 80px;
             height: 80px;
-            top: 5px;
-            left: 180px;
+            top: -4px;
+            bottom: 0px;
+            left: 20px;
         }
         .logo img{
             width: 100%;
@@ -47,16 +51,43 @@
         .icon-top{
             display: flex;
             flex-wrap: wrap;
-            top: 0px;
-            right: 160px;
             position: absolute;
+            right: 0px;
+            bottom: 40px;
+            align-items: center;
         }
-        .icon-top li:nth-child(1) i{
+        .icon-top li{
+            margin: 0px;
+        }
+        .icon-top li form{
+            width: 120px;
+            display: flex;
+            border: 1px solid #223424;
+            justify-content: center;
+            border-radius: 100px;
+            top: 0px;
+        }
+        .icon-top li form button i{
             font-family: "Font Awesome 6 Free"; 
-            font-weight: 900; 
+            font-weight: 700; 
             content: "\f002";
             font-size: 18px;
             color: rgba(103, 103, 103, 1);
+        }
+        .icon-top li form input{
+            border: none;
+            background: none;
+            line-height: 18px;
+            width: 80px;
+            margin-top: 0px;   
+        }
+        .icon-top li form input:focus{
+            outline: none;
+        }
+        .icon-top li form button{
+            border: none;
+            background: none;
+            margin: 3px;
         }
         .icon-top li:nth-child(2) i{
             font-family: "Font Awesome 6 Free"; 
@@ -71,10 +102,6 @@
             content: "\f007";
             font-size: 18px;
             color: rgba(103, 103, 103, 1);
-        }
-        .icon-top li:hover{
-            background-color: #fa0;
-            border-radius: 50%;
         }
         .main-nav{
             display: flex;
@@ -91,13 +118,50 @@
         .header .main-nav li a:hover{
             color: rgb(225, 95, 8);
         } 
-        .header .main-nav li a img{
+        .header .main-nav li a img, .main-detail button img{
             width: 15%;
             margin: auto;
             padding-right: 10px;
         }
+        .main-detail button img{
+            width: 18%;
+        }
         li{
             margin: 10px;
+        }
+        .main-detail{
+            position: relative;
+        }
+        .main-detail button{
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            color: rgb(77, 77, 77);
+            font-weight: bold;
+            margin-bottom:30px;
+            margin-right: 26px;
+            cursor: pointer;
+        }
+        .main-detail button:hover{
+            color:rgb(225, 95, 8);
+        }
+        .main-detail .pro-item{
+            width: 80px;
+            height: 140px;
+            position: absolute;
+            padding: 10px;
+            line-height: 1.4;
+            top: 35px;
+            left: 35px;
+            border-radius: 0px 0px 5px 5px;
+            display: none;
+        }
+        .main-nav .main-detail:hover > div{
+            background-color: rgb(250, 207, 98);
+            display: block;
+        }
+        .main-nav .main-detail .pro-item a:hover{
+            color: rgb(225, 95, 8);
         }
         .wrap{
             padding-top: 60px;
@@ -263,42 +327,51 @@
 <body>
     <div class="wrap">
         <div class="wrap-header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./head/logo.png" alt="">
-                </a>
-            </div>
             <div class="header">
-                <ul class="icon-top">
-                    <li>
-                        <a href="">
-                            <i class="fa-regular fa-magnifying-glass"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa-regular fa-cart-shopping"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa-regular fa-user"></i>
-                        </a>
-                    </li>
-                </ul>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./head/logo.png" alt="">
+                    </a>
+                </div>
                 <ul class="main-nav">
                     <li>
-                        <a href=""><img src="./head/icon-leaves.png" alt="">熱銷排行榜</a>
+                        <a href="hot.html"><img src="./head/icon-leaves.png" alt="">熱銷排行榜</a>
+                    </li>
+                    <li class="main-detail">
+                        <button><img src="./head/icon-leaves.png" alt="">產品分類</button>
+                        <div class="pro-item">
+                            <a href="rice.html">主食類</a>
+                            <a href="">素料理</a>
+                            <a href="">拌醬類</a>
+                            <a href="">湯底</a>
+                            <a href="">零嘴</a>
+                        </div>
                     </li>
                     <li>
-                        <a href=""><img src="./head/icon-leaves.png" alt="">產品分類</a>
-                    </li>
-                    <li>
-                        <a href=""><img src="./head/icon-leaves.png" alt="">門市據點</a>
+                        <a href="place.html"><img src="./head/icon-leaves.png" alt="">門市據點</a>
                     </li>
                     <li>
                         <a href=""><img src="./head/icon-leaves.png" alt="">最新消息</a>
                     </li>
+                    <ul class="icon-top">
+                        <li>
+                            <form action="">
+                                <label for="sea"></label>
+                                <input type="search" id="sea" placeholder="搜尋">
+                                <button><i class="fa-regular fa-magnifying-glass"></i></i></button>
+                            </form>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-regular fa-cart-shopping"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </ul>
             </div>
         </div>
