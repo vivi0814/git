@@ -253,23 +253,21 @@
             /* height: 2000px; */
             display: flex;
             flex-wrap: wrap;
-            /* outline: 1px solid blue; */
         }
         .pro-item-detail{
-            /* outline: 5px solid red; */
             width: 960px;
             display: flex;
+
         }
         .pro-item-detail .pro-item-detail-pic{
-            width:500px;
+            width:50%;
             /* height: 700px; */
             height: 100%;
-            padding: 30px;
-            outline: 7px solid green;
+            padding: 20px;
         }
         .pro-item-detail-pic img{
             width: 100%;
-            margin: 20px;
+            border-radius: 5px;
         }
         .pro-detail-txt{
             margin: 20px;
@@ -278,26 +276,36 @@
             display: flex;
             flex-direction: column;
             justify-content: start;
-            /* outline: 1px solid blue; */
         }
         .pro-detail-txt h2{
             width: 100%;
             letter-spacing: 2px;
             font-size: 40px;
             text-align: center;
-            padding: 20px 0px;
+            margin-bottom: 20px;
+            color: rgb(67, 66, 66);
+        }
+        .pro-detail-describe{
+            display: flex;
+            justify-content: center;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            width: 100%;
+            font-size: 22px;
+            margin-left: 2px;
+            color: rgb(117, 116, 116);
+
         }
         .pro-detail-price{
             width: 100%;
             margin-top: 30px;
-            padding: 20px 0px;
+            /* padding: 20px 0px; */
             letter-spacing: 3px;
             color: rgb(255, 24, 24);
             font-size: 30px;
             font-weight: bold;
             font-family: 'Yaldevi', sans-serif;
             text-align: center;
-            /* outline: 1px solid blue; */
         }
         .pro-detail-amount{
             width: 100%;
@@ -312,7 +320,6 @@
             width: 100%;
             justify-content: center;
             align-items: center;
-            /* outline: 1px solid blue; */
         }
         .price-cart-buy .cart::before{
             font-family: "Font Awesome 6 Free"; 
@@ -363,8 +370,89 @@
             font-size: 18px;
             font-weight: bold;
         }
-
-
+        .pro-item-small-pic{
+            display: flex;
+            flex-wrap: wrap;
+            width: 960px;
+            padding: 10px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .pro-item-small-pic-four{
+            width: 200px;
+            height: 140px;
+            margin: 10px;
+            margin-top: 20px;
+        }
+        .pro-item-small-pic-four img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+        .pro-item-detail-make{
+            width: 960px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .pro-item-detail-make-pic{
+            width: 500px;
+            height: 400px;
+            padding: 20px;
+            margin: 20px;
+            z-index: 1;
+        }
+        .pro-item-detail-make-pic img{
+            width: 100%;
+            margin-top: 100px;
+            margin-left: 40px;
+        }
+        .pro-item-detail-make-txt{
+            width: 380px;
+            height: 180px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin: auto;
+            background-color: #CBDCB7;
+            margin-bottom: 200px;
+            margin-left: -100px;
+        }
+        .pro-item-detail-make-txt p{
+            color:rgb(67, 66, 66);
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: 2px;
+            margin-right: 20px;
+        }
+        .pro-item-detail-make-txt-second{
+            width: 300px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background-color: #DFB79D;
+            margin-bottom: 200px;
+            margin-right: -40px;
+        }
+        .pro-item-detail-make-txt-second p{
+            color:rgb(67, 66, 66);
+            font-size: 20px;
+            line-height: 1.6;
+            letter-spacing: 2px;
+        }
+        .pro-item-detail-make-pic-second{
+            width: 500px;
+            height: 650px;
+            padding: 20px;
+            margin: 20px;
+            z-index: 1;
+        }
+        .pro-item-detail-make-pic-second img{
+            width: 100%;
+        }
 
 
 
@@ -382,7 +470,6 @@
             margin: auto;
             border-radius: 5px;
             box-shadow: 2px 2px 2px 0px #c9c9c9;
-            outline: 1px solid blue;
         }
         .pic-pro{
             width: 100%;
@@ -623,39 +710,24 @@
                 </nav>
             </div>
             <div class="grid-product">
-                <!-- <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="./product-detail/spicy-pro.jpeg" alt=""></div>
-                      <div class="swiper-slide"><img src="./product-detail/spicy-pro2.jpg" alt=""></div>
-                      <div class="swiper-slide"><img src="./product-detail/spicy-make.png" alt=""></div>
-                      <div class="swiper-slide"><img src="./product-detail/spicy-make2.jfif" alt=""></div>
-                      <div class="swiper-slide">Slide 5</div>
-                      <div class="swiper-slide">Slide 6</div>
-                      <div class="swiper-slide">Slide 7</div>
-                      <div class="swiper-slide">Slide 8</div>
-                      <div class="swiper-slide">Slide 9</div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                  </div> -->
-
-
-
-
-
                 <div class="pro-item-detail">
                     <div class="pro-item-detail-pic">
-                        <img src="./product-detail/spicy-pro.jpeg" alt="">
+                        <img src="./product-detail/spicy-pro33.jpg" alt="">
                     </div>
                     <div class="pro-detail-txt">
                         <h2>麻辣雙椒 (250g/罐)</h2>
-                        <p class="pro-detail-price">NT$230</p>
+                        <p class="pro-detail-describe">
+                            從味蕾裡尋找最美好的味道，<br>
+                            精挑四種不同風味的辣椒，<br>
+                            以不同溫度的火侯、數十道工序，<br>
+                            只為層層堆疊辣味香蘊
+                        </p>
                         <div class="pro-detail-amount">
                             <p>+ 0 -</p>
                         </div>
+                        <p class="pro-detail-price">NT$230</p>
                         <div class="price-cart-buy">
-                            <button class="cart"></button>
+                            <button class="cart"><a href=""></a></button>
                             <button class="buy">
                                 <a href="">
                                     立即購買
@@ -663,27 +735,47 @@
                             </button>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
                 </div>
-
-
-
-
-
-
-
-
-
-
+                <div class="pro-item-small-pic">
+                    <div class="pro-item-small-pic-four">
+                        <img src="./product-detail/spicy-make.png" alt="">
+                    </div>
+                    <div class="pro-item-small-pic-four">
+                        <img src="./product-detail/spicy-make2.jfif" alt="">
+                    </div>
+                    <div class="pro-item-small-pic-four">
+                        <img src="./product-detail/spicy-pro2.jpg" alt="">
+                    </div>
+                    <div class="pro-item-small-pic-four">
+                        <img src="./product-detail/spicy-proo.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="pro-item-detail-make">
+                    <div class="pro-item-detail-make-pic">
+                        <img src="./product-detail/spicy-make2.jfif" alt="">
+                    </div>
+                    <div class="pro-item-detail-make-txt">
+                        <p>
+                            嚴選兩種特種花椒<br>
+                            豆瓣醬與辣椒低溫翠香<br>
+                            多種中藥材熬煮而成<br>
+                            通過SGS檢驗認證<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="pro-item-detail-make">
+                    <div class="pro-item-detail-make-txt-second">
+                        <p>
+                            雙花椒的香氣盛宴<br>
+                            多種藥材的獨特香氣<br>
+                            入口麻辣辛香、底蘊順喉<br>
+                            嗜辣者的廚房必備醬<br>
+                        </p>
+                    </div>
+                    <div class="pro-item-detail-make-pic-second">
+                        <img src="./product-detail/spicy-make33.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="bottom-product">
@@ -693,7 +785,7 @@
                     <div class="item-product">
                         <div class="item-pro-touch">
                             <div class="big-cart">
-                                <a href="" class="big"></a>
+                                <a href="product-detail.html" class="big"></a>
                                 <a href="" class="cart"></a>
                             </div>
                             <div class="pic-pro">
@@ -710,7 +802,7 @@
                     <div class="item-product">
                         <div class="item-pro-touch">
                             <div class="big-cart">
-                                <a href="" class="big"></a>
+                                <a href="product-detail.html" class="big"></a>
                                 <a href="" class="cart"></a>
                             </div>
                             <div class="pic-pro">
@@ -727,7 +819,7 @@
                     <div class="item-product">
                         <div class="item-pro-touch">
                             <div class="big-cart">
-                                <a href="" class="big"></a>
+                                <a href="product-detail.html" class="big"></a>
                                 <a href="" class="cart"></a>
                             </div>
                             <div class="pic-pro">
@@ -744,7 +836,7 @@
                     <div class="item-product">
                         <div class="item-pro-touch">
                             <div class="big-cart">
-                                <a href="" class="big"></a>
+                                <a href="product-detail.html" class="big"></a>
                                 <a href="" class="cart"></a>
                             </div>
                             <div class="pic-pro">
@@ -761,7 +853,7 @@
                     <div class="item-product">
                         <div class="item-pro-touch">
                             <div class="big-cart">
-                                <a href="" class="big"></a>
+                                <a href="product-detail.html" class="big"></a>
                                 <a href="" class="cart"></a>
                             </div>
                             <div class="pic-pro">
@@ -778,7 +870,7 @@
                     <div class="item-product">
                         <div class="item-pro-touch">
                             <div class="big-cart">
-                                <a href="" class="big"></a>
+                                <a href="product-detail.html" class="big"></a>
                                 <a href="" class="cart"></a>
                             </div>
                             <div class="pic-pro">
