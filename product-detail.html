@@ -16,6 +16,7 @@
     <style>
         *{
             list-style: none;
+            font-family: 'Yaldevi', sans-serif;
         }
         a{
             text-decoration: none;
@@ -284,6 +285,7 @@
             text-align: center;
             margin-bottom: 20px;
             color: rgb(67, 66, 66);
+            font-family: 'Yaldevi', sans-serif;
         }
         .pro-detail-describe{
             display: flex;
@@ -298,21 +300,36 @@
         }
         .pro-detail-price{
             width: 100%;
-            margin-top: 30px;
-            /* padding: 20px 0px; */
+            margin-top: 20px;
             letter-spacing: 3px;
             color: rgb(255, 24, 24);
-            font-size: 30px;
+            font-size: 25px;
             font-weight: bold;
-            font-family: 'Yaldevi', sans-serif;
             text-align: center;
         }
         .pro-detail-amount{
             width: 100%;
-            padding: 20px 0px;
+            padding: 10px 0px;
             text-align: center;
             font-size: 30px;
-            
+        }
+        .pro-detail-amount span{
+            cursor: pointer;
+            margin: 0px 30px;
+        }
+        .pro-detail-amount .minus i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\f068";
+            font-size: 15px;
+            color: rgb(117, 116, 116);
+        }
+        .pro-detail-amount .plus i{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 700; 
+            content: "\2b";
+            font-size: 15px;
+            color: rgb(117, 116, 116);
         }
         .price-cart-buy{
             display: flex;
@@ -320,6 +337,7 @@
             width: 100%;
             justify-content: center;
             align-items: center;
+            margin-left: 30px;
         }
         .price-cart-buy .cart::before{
             font-family: "Font Awesome 6 Free"; 
@@ -453,17 +471,6 @@
         .pro-item-detail-make-pic-second img{
             width: 100%;
         }
-
-
-
-
-
-
-
-
-
-
-
         .item-product{
             width: 250px;
             height: 330px;
@@ -500,7 +507,7 @@
         .item-product .price{
             padding: 2px;
             margin: 8px;
-            font-size: 22px;
+            font-size: 18px;
             color: rgb(255, 24, 24);
             font-weight: bold;
             font-family: 'Yaldevi', sans-serif;
@@ -723,7 +730,7 @@
                             只為層層堆疊辣味香蘊
                         </p>
                         <div class="pro-detail-amount">
-                            <p>+ 0 -</p>
+                            <p><span class="minus"><i class="fa-regular fa-minus"></i></span>1<span class="plus"><i class="fa-regular fa-plus"></i></span></p>
                         </div>
                         <p class="pro-detail-price">NT$230</p>
                         <div class="price-cart-buy">
