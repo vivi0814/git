@@ -173,7 +173,7 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .content h2{
+        .content h1{
             width: 1200px;
             font-size: 40px;
             margin: auto;
@@ -195,26 +195,26 @@
             display: flex;
             justify-content: center;
         }
-        .cart-title p{
+        .cart-title h2{
             font-size: 26px;
             margin-top: 40px;
             margin-bottom: 5px;
             margin-right: 35px;
             color: rgb(117, 116, 116);
         }
-        .cart-title p:nth-child(1){
+        .cart-title h2:nth-child(1){
             width: 430px;
             text-align: center;
         }
-        .cart-title p:nth-child(2){
+        .cart-title h2:nth-child(2){
             width: 100px;
             text-align: center;
         }
-        .cart-title p:nth-child(3){
+        .cart-title h2:nth-child(3){
             width: 180px;
             text-align: center;
         }
-        .cart-title p:nth-child(4){
+        .cart-title h2:nth-child(4){
             width: 180px;
             text-align: center;
         }
@@ -260,8 +260,10 @@
             justify-content: center;
             align-items: center;
             font-size: 20px;
-            color:rgb(117, 116, 116);
             letter-spacing: 2px;
+        }
+        .cart-item-list-name a{
+            color:rgb(117, 116, 116);
         }
         .cart-item-list-price{
             display: flex;
@@ -482,17 +484,17 @@
                         <button><img src="./head/icon-leaves.png" alt="">產品分類</button>
                         <div class="pro-item">
                             <a href="rice.html">主食類</a>
-                            <a href="">素料理</a>
-                            <a href="">拌醬類</a>
-                            <a href="">湯底</a>
-                            <a href="">零嘴</a>
+                            <a href="rice.html">素料理</a>
+                            <a href="rice.html">拌醬類</a>
+                            <a href="rice.html">湯底</a>
+                            <a href="rice.html">零嘴</a>
                         </div>
                     </li>
                     <li>
                         <a href="place.html"><img src="./head/icon-leaves.png" alt="">門市據點</a>
                     </li>
                     <li>
-                        <a href=""><img src="./head/icon-leaves.png" alt="">最新消息</a>
+                        <a href="news.html"><img src="./head/icon-leaves.png" alt="">最新消息</a>
                     </li>
                     <ul class="icon-top">
                         <li>
@@ -503,12 +505,12 @@
                             </form>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="shoppingcart.html">
                                 <i class="fa-regular fa-cart-shopping"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="login.html">
                                 <i class="fa-regular fa-user"></i>
                             </a>
                         </li>
@@ -517,13 +519,13 @@
             </div>
         </div>
         <div class="content">
-            <h2>購物車</h2>
+            <h1>購物車</h1>
             <hr class="style-cart"/>
             <div class="cart-title">
-                <p>商品</p>
-                <p>價格</p>
-                <p>數量</p>
-                <p>小計</p>
+                <h2>商品</h2>
+                <h2>價格</h2>
+                <h2>數量</h2>
+                <h2>小計</h2>
             </div>
             <hr class="style-one"/>
             <div class="cart-item">
@@ -535,7 +537,7 @@
                     </div>
                     <div class="cart-item-background">
                         <div class="cart-item-list-name">
-                            <p>天香麻辣醬</p>
+                            <p><a href="product-detail.html">天香麻辣醬</a> </p>
                         </div>
                         <div class="cart-item-list-price">
                             <p>$230</p>
@@ -559,7 +561,7 @@
                     </div>
                     <div class="cart-item-background-2">
                         <div class="cart-item-list-name">
-                            <p>南洋咖哩湯麵</p>
+                            <p><a href="product-detail.html"> 南洋咖哩湯麵</a></p>
                         </div>
                         <div class="cart-item-list-price">
                             <p>$250</p>
@@ -583,7 +585,7 @@
                     </div>
                     <div class="cart-item-background">
                         <div class="cart-item-list-name">
-                            <p>老薑麻油猴頭菇</p>
+                            <p><a href="product-detail.html">老薑麻油猴頭菇</a></p>
                         </div>
                         <div class="cart-item-list-price">
                             <p>$250</p>
@@ -614,7 +616,7 @@
                     <a href="hot.html">繼續購物</a>
                 </div>
                 <div class="cart-pay-now">
-                    <a href="">結帳</a>
+                    <a href="pay.html">結帳</a>
                 </div>
             </div>
 
@@ -648,8 +650,8 @@
                     <div class="footer-item">
                         <h3>客服資訊</h3>
                         <nav>
-                            <a href="">信箱留言</a>
-                            <a href="">聯絡我們</a>
+                            <a href="contact.html">信箱留言</a>
+                            <a href="contact.html">聯絡我們</a>
                         </nav>
                     </div>
                     <div class="footer-item-icon">

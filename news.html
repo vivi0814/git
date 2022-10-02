@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於素拾</title>
+    <title>最新消息</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
@@ -12,6 +12,7 @@
     <style>
         *{
             list-style: none;
+            font-family: 'Yaldevi', sans-serif;
         }
         a{
             text-decoration: none;
@@ -172,13 +173,13 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .content h1{
-            width: 1200px;
+        h2{
+            width: 1150px;
             font-size: 40px;
+            margin-top: 50px;
+            margin-left: 50px;
             font-weight: bold;
             color: rgb(67, 66, 66);
-            padding-top: 50px;
-            margin-left: 50px;
         }
         hr.style-cart{
             width: 20%;
@@ -188,71 +189,66 @@
             margin-top: 4px;
             background-color: rgba(151, 151, 151, 0.75);
         }
-        .item{
-            display: flex;
+        .news::before{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            content: "\f053";
+            font-size: 40px;
+            color: rgb(190, 190, 190);
+            margin: auto;
             padding: 20px;
-            
+            cursor: pointer;
         }
-        .content .item:nth-child(2n){
-            flex-direction: row-reverse;
+        .news::after{
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            content: "\f054";
+            font-size: 40px;
+            color: rgb(190, 190, 190);
+            margin:auto;
+            padding: 20px;
+            cursor: pointer;
         }
-        .item .pic{
-            width: 50%;
-            margin: auto;
-        }
-        .item .pic img{
-            width: 100%;
-            vertical-align: top;
-        }
-        .item .title{
-            width: 50%;
-            font-size: 18px;
-            margin: auto;
-            line-height: 1.6;
-            text-align: left;
-
-        }
-        .content .item:nth-child(2) .title{
-            width: 45%;
-            background-color: rgba(210, 221, 197, 1);
-            padding: 30px;
-            padding-left: 80px;
-            
-        }
-        .content .item:nth-child(3) .title{
-            background-color: rgba(253, 230, 189, 0.8);
-            width: 40%;
-            margin-right: 70px;
+        .news{
+            width: 1200px;
             padding: 10px;
-            padding-left: 30px;
-        }
-        .content .item:nth-child(3) .pic{
-            width: 58%;
-            margin-left: 70px;
-            
-        }
-        .content .item:nth-child(4) .title{
-            background-color:  rgba(223, 183, 157, 1);
-            margin-left: 200px;
-            height: 200px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             display: flex;
-            text-align: left;
-            padding-left: 30px;
-            align-items: center;
+            justify-content: center;
+
         }
-        .content .item:nth-child(4) .pic{
-            margin-right: 50px;
+        .news-pic{
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .news-pic img{
+            object-position: center center;
+            width: 100%;
+        }
+        .news-txt{
+            width: 270px;
+            height: 250px;
+            margin-top: 70px;
+            background-color:rgba(253, 230, 189, 0.8);
+        }
+        .news-txt p{
+            font-size: 26px;
+            color:rgb(117, 116, 116);
+            margin: 40px 40px 50px 40px;
+        }
+        .news-txt:nth-child(1){
+            width: 350px;
+            height: 250px;
+            background-color:rgba(223, 183, 157, 1);
+        }
+        .news-txt:nth-child(1) p{
+            margin-left: 80px;
         }
 
-        .content .item:nth-child(5) .title{
-            background-color: rgba(163, 171, 140, 0.8);
-            margin-right: 150px;
-            padding: 50px;
-            padding-left: 70px;
-        }
-        .content .item:nth-child(5) .pic{
-            margin-left: 70px;
-        }
         .footer{
             width: 100%;
             background-color: rgba(186, 204, 174, 1);
@@ -327,7 +323,8 @@
         .footer-item-logo img{
             width: 100%;
         }
-        
+
+
 
 
     </style>
@@ -384,55 +381,28 @@
             </div>
         </div>
         <div class="content">
-            <h1>關於素拾</h1>
+            <h2>素拾去市集</h2>
             <hr class="style-cart"/>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/banner1.jpg" alt="">
+            <div class="news">
+                <div class="news-pic">
+                    <img src="./news/market.jpg" alt="">
                 </div>
-                <div class="title">
-                    <p>近年來，環境遭到人類大肆地破壞，其中，畜牧養殖業排出的溫室氣體高達全球18% !<br><br>研究顯示，要製造等量的蛋白質，生產牛肉消耗的水比大豆或扁豆高達六倍之多。<br><br>為了保護我們的地球，素拾致力於提倡環保活動，宣揚健康並且對環境友善的飲食習慣。</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/1.jpg" alt="">
-                </div>
-                <div class="title">
-                    <p>
-                        提到減碳飲食，<br>
-                        最多人響應的就是「少肉多蔬」，<br>
-                        <br>
-                        希望藉由飲食來達到健康的目的，<br>
-                        減少二氧化碳排放，讓身體更沒有負擔。
-                    </p>
+                <div class="news-txt">
+                    <p>世界素食日</p>
+                    <p>時間:111/10/1</p>
+                    <p>地點:南港展覽館</p>
                 </div>
             </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/2.jpg" alt="">
+            <h2>素拾有合作</h2>
+            <hr class="style-cart"/>
+            <div class="news">
+                <div class="news-txt">
+                    <p>TAIGA針葉林</p>
+                    <p>聯名商品</p>
+                    <p>上架日:111/10/29</p>
                 </div>
-                <div class="title">
-                    <p>
-                        素拾相信，<br>
-                        吃素可以是輕鬆又簡單的選擇，<br>
-                        清晰且堅持的素拾理念，<br>
-                        不代表要犧牲享受美食的機會，<br>
-                        堅定地要給大家美好的素食產品。
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/3.jpg" alt="">
-                </div>
-                <div class="title">
-                    <p>
-                        素食風潮也在好萊塢蔓延，<br>
-                        跟上素食的風潮，「少肉食，減暖化」，<br>
-                        希望素拾能影響大家，一起改變飲食習慣，<br>
-                        不僅吃得健康，同時減碳救地球。
-                    </p>
+                <div class="news-pic">
+                    <img src="./news/res1.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -440,7 +410,7 @@
             <div class="content">
                 <div class="footer-head">
                     <div class="footer-item">
-                        <h3><a href="aboutus.html"> 關於我們</a></h3>
+                        <h3><a href="aboutus.html">關於我們</a></h3>
                         <nav>
                             <a href="aboutus.html">品牌故事</a>
                             <a href="place.html">門市據點</a>
@@ -476,8 +446,6 @@
                 </div>
             </div>
         </div>
-
-
-        
+    </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於素拾</title>
+    <title>聯絡我們</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
@@ -12,6 +12,7 @@
     <style>
         *{
             list-style: none;
+            font-family: 'Yaldevi', sans-serif;
         }
         a{
             text-decoration: none;
@@ -172,86 +173,113 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .content h1{
-            width: 1200px;
-            font-size: 40px;
+        section{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        .contact-txt, .address{
+            width: 470px;
+            background-color: rgba(186, 204, 174, 1);
+            margin: 20px;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+        .contact-txt h2, .address h2, .contact-form h2{
+            font-size: 30px;
             font-weight: bold;
             color: rgb(67, 66, 66);
-            padding-top: 50px;
-            margin-left: 50px;
+        }
+        .contact-form h2{
+            margin-top: -19px;
         }
         hr.style-cart{
-            width: 20%;
-            margin-left: 50px;
+            width: 25%;
             height: 2px;
             border: 0;
             margin-top: 4px;
             background-color: rgba(151, 151, 151, 0.75);
         }
-        .item{
-            display: flex;
-            padding: 20px;
-            
+        .contact-txt p{
+            color: rgb(117, 116, 116);
+            font-size: 22px;
+            margin: 10px;
         }
-        .content .item:nth-child(2n){
-            flex-direction: row-reverse;
+        .map{
+            margin: 10px;
+            width: 80%;
+            aspect-ratio: 16/9;
         }
-        .item .pic{
-            width: 50%;
-            margin: auto;
-        }
-        .item .pic img{
+        .map iframe{
             width: 100%;
-            vertical-align: top;
+            height: 100%;
+            vertical-align: middle;
         }
-        .item .title{
-            width: 50%;
-            font-size: 18px;
-            margin: auto;
-            line-height: 1.6;
-            text-align: left;
-
-        }
-        .content .item:nth-child(2) .title{
-            width: 45%;
-            background-color: rgba(210, 221, 197, 1);
-            padding: 30px;
-            padding-left: 80px;
-            
-        }
-        .content .item:nth-child(3) .title{
-            background-color: rgba(253, 230, 189, 0.8);
-            width: 40%;
-            margin-right: 70px;
-            padding: 10px;
-            padding-left: 30px;
-        }
-        .content .item:nth-child(3) .pic{
-            width: 58%;
-            margin-left: 70px;
-            
-        }
-        .content .item:nth-child(4) .title{
-            background-color:  rgba(223, 183, 157, 1);
-            margin-left: 200px;
-            height: 200px;
+        .contact-form{
+            width: 450px;
+            margin: 40px;
+            padding: 20px;
+            margin-left: 20px;
+            background-color: rgba(186, 204, 174, 1);
             display: flex;
-            text-align: left;
-            padding-left: 30px;
+            flex-direction: column;
+            padding: 40px;
+            border-radius: 5px;
+        }
+        .form-txt{
+            width: 100%;
+            margin: 15px 10px;
+            font-size: 22px;
+            color: rgb(117, 116, 116);
+            display: flex;
+            justify-content: space-between;
+        }  
+        input.form-txt-input{
+            width: 250px;
+            height: 25px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            text-align: center;
+            margin-right: 80px;
+        } 
+        textarea{
+            width: 250px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            margin-right: 80px;
+            resize: none;
+        }
+        .cart-pay-now{
+            text-align: center;
+            width: 60px;
+            padding: 10px;
+            background-color: rgba(255, 215, 114, 1);
+            border-radius: 5px;
+            border: none;
+            box-shadow: 2px 2px 2px 0px #909090; 
+            transition: .3s;
+            display: flex;
+            justify-content: center;
             align-items: center;
+            margin: auto;
+            /* margin-bottom: 20px; */
         }
-        .content .item:nth-child(4) .pic{
-            margin-right: 50px;
+        .cart-pay-now:hover{
+            background-color: rgb(255, 183, 0);
+            transform: scale(1.05);
         }
-
-        .content .item:nth-child(5) .title{
-            background-color: rgba(163, 171, 140, 0.8);
-            margin-right: 150px;
-            padding: 50px;
-            padding-left: 70px;
+        .cart-pay-now:active{
+            transform: scale(1);
+            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
         }
-        .content .item:nth-child(5) .pic{
-            margin-left: 70px;
+        .cart-pay-now a{
+            font-size: 22px;
+            color:rgb(117, 116, 116);
+            font-weight: bold;
         }
         .footer{
             width: 100%;
@@ -327,7 +355,8 @@
         .footer-item-logo img{
             width: 100%;
         }
-        
+
+
 
 
     </style>
@@ -384,63 +413,55 @@
             </div>
         </div>
         <div class="content">
-            <h1>關於素拾</h1>
-            <hr class="style-cart"/>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/banner1.jpg" alt="">
-                </div>
-                <div class="title">
-                    <p>近年來，環境遭到人類大肆地破壞，其中，畜牧養殖業排出的溫室氣體高達全球18% !<br><br>研究顯示，要製造等量的蛋白質，生產牛肉消耗的水比大豆或扁豆高達六倍之多。<br><br>為了保護我們的地球，素拾致力於提倡環保活動，宣揚健康並且對環境友善的飲食習慣。</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/1.jpg" alt="">
-                </div>
-                <div class="title">
-                    <p>
-                        提到減碳飲食，<br>
-                        最多人響應的就是「少肉多蔬」，<br>
-                        <br>
-                        希望藉由飲食來達到健康的目的，<br>
-                        減少二氧化碳排放，讓身體更沒有負擔。
+            <section>
+                <div class="contact-txt">
+                    <h2>客服資訊</h2>
+                    <hr class="style-cart"/>
+                    <p>公司地址：台北市信義區忠孝東路一段888號
                     </p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/2.jpg" alt="">
-                </div>
-                <div class="title">
-                    <p>
-                        素拾相信，<br>
-                        吃素可以是輕鬆又簡單的選擇，<br>
-                        清晰且堅持的素拾理念，<br>
-                        不代表要犧牲享受美食的機會，<br>
-                        堅定地要給大家美好的素食產品。
+                    <p>公司電話：02-1234-5678
                     </p>
+                    <p>客服時間： 10:00-19:00</p>
                 </div>
-            </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="./aboutus/3.jpg" alt="">
+                <div class="address">
+                    <h2>公司地址</h2>
+                    <hr class="style-cart"/>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6840025902716!2d121.52096745067986!3d25.04479578388859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9704ef16001%3A0x5e150014c562bdda!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A5b-g5a2d5p2x6Lev5LiA5q61!5e0!3m2!1szh-TW!2stw!4v1664613553962!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+
                 </div>
-                <div class="title">
-                    <p>
-                        素食風潮也在好萊塢蔓延，<br>
-                        跟上素食的風潮，「少肉食，減暖化」，<br>
-                        希望素拾能影響大家，一起改變飲食習慣，<br>
-                        不僅吃得健康，同時減碳救地球。
-                    </p>
+            </section>
+            <form class="contact-form"> 
+                <h2>聯絡表單</h2>
+                <hr class="style-cart"/>
+                <div class="form-txt">
+                    <label>姓名</label>
+                    <input type="text" class="form-txt-input">
                 </div>
-            </div>
+                <div class="form-txt">
+                    <label>電子郵件</label>
+                    <input type="email" class="form-txt-input">
+                </div>
+                <div class="form-txt">
+                    <label>聯絡電話</label>
+                    <input type="tel" class="form-txt-input">
+                </div>
+                <div class="form-txt">
+                    <label>訊息內容</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="cart-pay-now">
+                    <a href="">送出</a>
+                </div>
+            </form>
         </div>
         <div class="footer">
             <div class="content">
                 <div class="footer-head">
                     <div class="footer-item">
-                        <h3><a href="aboutus.html"> 關於我們</a></h3>
+                        <h3><a href="aboutus.html">關於我們</a></h3>
                         <nav>
                             <a href="aboutus.html">品牌故事</a>
                             <a href="place.html">門市據點</a>
@@ -476,8 +497,6 @@
                 </div>
             </div>
         </div>
-
-
-        
+    </div>
 </body>
 </html>
