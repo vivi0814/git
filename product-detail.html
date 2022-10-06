@@ -258,27 +258,45 @@
         .pro-item-detail{
             width: 960px;
             display: flex;
-
         }
         .pro-item-detail .pro-item-detail-pic{
-            width:50%;
-            /* height: 700px; */
-            height: 100%;
+            width:60%;
+            height: 450px;
             padding: 20px;
         }
         .pro-item-detail-pic img{
             width: 100%;
             border-radius: 5px;
         }
+        .pro-item-small-pic{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            /* padding: 10px; */
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .pro-item-small-pic-four{
+            width: 100px;
+            height: 70px;
+            margin: 10px;
+            margin-top: 20px;
+        }
+        .pro-item-small-pic-four img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
         .pro-detail-txt{
-            margin: 20px;
+            margin: 10px 0px;
             padding-top: 50px;
-            width: 50%;
+            width: 40%;
             display: flex;
             flex-direction: column;
             justify-content: start;
         }
-        .pro-detail-txt h2{
+        .pro-detail-txt h1{
             width: 100%;
             letter-spacing: 2px;
             font-size: 40px;
@@ -298,6 +316,13 @@
             color: rgb(117, 116, 116);
 
         }
+        .pro-detail-amount{
+            width: 100%;
+            padding: 10px 0px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 30px;
+        }
         .pro-detail-price{
             width: 100%;
             margin-top: 20px;
@@ -306,12 +331,6 @@
             font-size: 25px;
             font-weight: bold;
             text-align: center;
-        }
-        .pro-detail-amount{
-            width: 100%;
-            padding: 10px 0px;
-            text-align: center;
-            font-size: 30px;
         }
         .pro-detail-amount span{
             cursor: pointer;
@@ -388,26 +407,7 @@
             font-size: 18px;
             font-weight: bold;
         }
-        .pro-item-small-pic{
-            display: flex;
-            flex-wrap: wrap;
-            width: 960px;
-            padding: 10px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        .pro-item-small-pic-four{
-            width: 200px;
-            height: 140px;
-            margin: 10px;
-            margin-top: 20px;
-        }
-        .pro-item-small-pic-four img{
-            object-fit: cover;
-            object-position: center;
-            width: 100%;
-            height: 100%;
-        }
+        
         .pro-item-detail-make{
             width: 960px;
             display: flex;
@@ -552,6 +552,12 @@
             height: 400px;
             margin: auto;
             padding: 10px;
+        }
+        .bottom-product h2{
+            font-size: 22px;
+            font-weight: lighter;
+            margin-left: 50px;
+            color: rgb(117, 116, 116);
         }
         .swiper {
             height: 100%;
@@ -719,10 +725,26 @@
             <div class="grid-product">
                 <div class="pro-item-detail">
                     <div class="pro-item-detail-pic">
-                        <img src="./product-detail/spicy-pro33.jpg" alt="">
+                        <div class="pro-item-detail-pic-big">
+                            <img src="./product-detail/spicy-pro2.jpg" alt="">
+                        </div>
+                        <div class="pro-item-small-pic">
+                            <div class="pro-item-small-pic-four">
+                                <img src="./product-detail/spicy-make.png" alt="">
+                            </div>
+                            <div class="pro-item-small-pic-four">
+                                <img src="./product-detail/spicy-make2.jpg" alt="">
+                            </div>
+                            <div class="pro-item-small-pic-four">
+                                <img src="./product-detail/spicy-prooo.jpg" alt="">
+                            </div>
+                            <div class="pro-item-small-pic-four">
+                                <img src="./product-detail/spicy-proo.jpeg" alt="">
+                            </div>
+                        </div>
                     </div>
                     <div class="pro-detail-txt">
-                        <h2>麻辣雙椒 (250g/罐)</h2>
+                        <h1>麻辣雙椒 (250g/罐)</h1>
                         <p class="pro-detail-describe">
                             從味蕾裡尋找最美好的味道，<br>
                             精挑四種不同風味的辣椒，<br>
@@ -743,23 +765,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="pro-item-small-pic">
-                    <div class="pro-item-small-pic-four">
-                        <img src="./product-detail/spicy-make.png" alt="">
-                    </div>
-                    <div class="pro-item-small-pic-four">
-                        <img src="./product-detail/spicy-make2.jfif" alt="">
-                    </div>
-                    <div class="pro-item-small-pic-four">
-                        <img src="./product-detail/spicy-pro2.jpg" alt="">
-                    </div>
-                    <div class="pro-item-small-pic-four">
-                        <img src="./product-detail/spicy-proo.jpeg" alt="">
-                    </div>
-                </div>
+                
                 <div class="pro-item-detail-make">
                     <div class="pro-item-detail-make-pic">
-                        <img src="./product-detail/spicy-make2.jfif" alt="">
+                        <img src="./product-detail/spicy-make2.jpg" alt="">
                     </div>
                     <div class="pro-item-detail-make-txt">
                         <p>
@@ -780,12 +789,13 @@
                         </p>
                     </div>
                     <div class="pro-item-detail-make-pic-second">
-                        <img src="./product-detail/spicy-make33.jpg" alt="">
+                        <img src="./product-detail/spicy-pro33.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
         <div class="bottom-product">
+            <h2>你可能會喜歡...</h2>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
