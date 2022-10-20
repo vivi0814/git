@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="alltypes.css">
+    <link rel="stylesheet" href="place.css">
 
     <!-- ======字型===== -->
     <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
@@ -15,158 +16,6 @@
     <!-- ======動畫===== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <style>
-        .ban{
-            width: 100%;
-            max-width: 1200px;
-            height: 100%;
-            margin: auto;
-            margin-top: 60px;
-            /* 65 110 245 290  */
-            background: linear-gradient(70deg,#FDE6BD 48%, transparent 43%) center center/100% 100%,
-            url(./head/place2.png) right center/ auto 100%;
-        }
-        .place-page{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-        .place-page-mobile{
-            display: none;
-            padding: 30px;
-            margin: auto;
-        }
-        .place-pic-mobile{
-            width: 100%;
-            
-        }
-        .place-pic-mobile img{
-            width: 100%;
-            border-radius: 5px;
-        }
-        .place-page h2{
-            border-bottom: 1px solid rgb(85, 85, 85);
-            margin-left: 100px;
-            margin-bottom: 30px;
-            color: rgb(67, 66, 66);
-            font-weight: bold;
-        }
-        .place-txt{
-            font-size: 18px;
-            font-family: 'Yaldevi', sans-serif;
-            margin-left: 60px;
-            line-height: 1.6;
-            color:rgb(117, 116, 116);
-        }
-        .place-page-mobile h2{
-            margin: 10px;
-            font-size:20px;
-            color: rgb(67, 66, 66);
-            font-weight: bold;
-        }
-        .place-page-mobile p{
-            font-size: 14px;
-            margin: 10px;
-            line-height: 1.6;
-            color:rgb(117, 116, 116);
-        }
-        .ban-second{
-            width: 100%;
-            max-width: 1200px;
-            height: 100%;
-            background-color: #ccc;
-            margin: auto;
-            margin-top: 60px;
-            /* 65 110 245 290  */
-            background: linear-gradient(290deg,#DFB79D 48%, transparent 43%) center center/100% 100%,
-            url(./head/place3.png) left center/ auto 100%;
-        }
-        .place-page-2{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-        }
-        .place-page-2 h2{
-            border-bottom: 1px solid rgb(85, 85, 85);
-            margin-right: 180px;
-            margin-bottom: 30px;
-            color: rgb(67, 66, 66);
-            font-weight: bold;
-        }
-        .place-txt-2{
-            font-family: 'Yaldevi', sans-serif;
-            margin-right: 40px;
-            line-height: 1.6;
-            color:rgb(117, 116, 116);
-        }
-        .ban-third{
-            width: 100%;
-            max-width: 1200px;
-            height: 100%;
-            margin: auto;
-            margin-top: 60px;
-            margin-bottom: 60px;
-            /* 65 110 245 290  */
-            background: linear-gradient(70deg,#D2DDC5 48%, transparent 43%) center center/100% 100%,
-            url(./head/place4.jpg) right center/ auto 100%;
-        }
-        
-        @media screen and (max-width:767px) {
-            .place-page{
-                height: 300px;
-            }
-            .ban, .ban-second, .ban-third{
-                display: none;
-            }
-            .ban-second{
-                display: none;
-            }
-            .place-page-mobile{
-                display: block;
-            }
-            
-            
-        }
-        @media screen and (min-width:768px){
-            .place-page, .place-page-2{
-                height: 400px;
-            }
-            .place-page h2{
-                font-size:26px;
-                margin-left: 140px;
-            }
-            .place-page-2 h2{
-                font-size:26px;
-            }
-            .place-txt, .place-txt-2{
-                font-size: 20px;
-            }
-        }
-        @media screen and (min-width:1200px){
-            .place-page, .place-page-2{
-                height: 500px;
-            }
-            .place-page h2{
-                font-size:28px;
-            }
-            .place-page-2 h2{
-                font-size:28px;
-                margin-right: 280px;
-            }
-            .place-txt{
-                font-size: 22px;
-                margin-left: 100px;
-            }
-            .place-txt-2{
-                font-size: 22px;
-                margin-right: 120px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="wrap">
@@ -174,11 +23,11 @@
             <input type="checkbox" name="" id="menu-switch">
             <nav class="header">
                 <!-- logo -->
-                <div class="logo">
+                <h1 class="logo">
                     <a href="index.html">
                         <img src="./head/logo.png" alt="">
                     </a>
-                </div>
+                </h1>
                 <!-- 漢堡 -->
                 <label for="menu-switch" class="hb">
                     <span class="menu-switch-menu"></span>

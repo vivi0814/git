@@ -33,44 +33,36 @@
             background-color: rgba(151, 151, 151, 0.75);
         }
         .news{
-            width: 1200px;
-            padding: 10px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            width: 85%;
             display: flex;
             justify-content: center;
-
+            /* margin: 10px; */
+            padding: 20px;
+            margin: auto;
+            outline: 1px solid red;
         }
         .news-pic{
-            width: 800px;
-            height: 450px;
+            width: 80%;
             overflow: hidden;
-            object-fit: cover;
             border-radius: 5px;
+            margin: auto;
+            outline: 1px solid blue;
         }
         .news-pic img{
-            object-position: center center;
             width: 100%;
+            vertical-align: top;
         }
         .news-txt{
-            width: 280px;
-            height: 250px;
-            margin-top: 70px;
-            background-color:rgba(253, 230, 189, 0.8);
+            width: 70%;
+            padding: 10px;
+            margin: auto;
+            outline: 1px solid red;
         }
         .news-txt p{
-            font-size: 26px;
+            font-size: 20px;
             color:rgb(117, 116, 116);
-            margin: 40px 40px 50px 40px;
         }
-        .news-txt:nth-child(1){
-            width: 350px;
-            height: 250px;
-            background-color:rgba(223, 183, 157, 1);
-        }
-        .news-txt:nth-child(1) p{
-            margin-left: 80px;
-        }
+        
         @media screen and (max-width:767px) {
 
         }
@@ -82,12 +74,29 @@
             hr.style-cart{
                 width: 20%;
             }
+            .news{
+                flex-direction: column;
+                /* margin: 50px; */
+            }
+            .news-pic{
+                width: 80%;
+            }
+            .news .news-txt.team-pic{
+                order: 1;
+            }
+            .news .news-txt.team{
+                order: 2;
+            }
+            .news-txt p{
+                font-size: 25px;
+            }
         }
 
         @media screen and (min-width:1200px){
             h2{
                 font-size: 40px;
             }
+            
         }
 
     
@@ -177,29 +186,110 @@
         <div class="container">
             <h2>素拾去市集</h2>
             <hr class="style-cart"/>
-            <div class="news">
-                <div class="news-pic">
-                    <img src="./news/market.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news">
+                        <div class="news-pic">
+                            <img src="./news/market.jpg" alt="">
+                        </div>
+                        <div class="news-txt">
+                            <p>世界素食日</p>
+                            <p>時間:111/10/1</p>
+                            <p>地點:南港展覽館</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-txt">
-                    <p>世界素食日</p>
-                    <p>時間:111/10/1</p>
-                    <p>地點:南港展覽館</p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news">
+                        <div class="news-pic">
+                            <img src="./news/market.jpg" alt="">
+                        </div>
+                        <div class="news-txt">
+                            <p>世界素食日</p>
+                            <p>時間:111/10/1</p>
+                            <p>地點:南港展覽館</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <h2>素拾有合作</h2>
-            <hr class="style-cart"/>
-            <div class="news">
-                <div class="news-txt">
-                    <p>TAIGA針葉林</p>
-                    <p>聯名商品</p>
-                    <p>上架日:111/10/29</p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news">
+                        <div class="news-pic">
+                            <img src="./news/market.jpg" alt="">
+                        </div>
+                        <div class="news-txt">
+                            <p>世界素食日</p>
+                            <p>時間:111/10/1</p>
+                            <p>地點:南港展覽館</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-pic">
-                    <img src="./news/res1.jpg" alt="">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news">
+                        <div class="news-pic">
+                            <img src="./news/market.jpg" alt="">
+                        </div>
+                        <div class="news-txt">
+                            <p>世界素食日</p>
+                            <p>時間:111/10/1</p>
+                            <p>地點:南港展覽館</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <h2>素拾有合作</h2>
+            <hr class="style-cart"/>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news">
+                        <div class="news-txt team">
+                            <p>TAIGA針葉林</p>
+                            <p>聯名商品</p>
+                            <p>上架日:111/10/29</p>
+                        </div>
+                        <div class="news-pic team-pic">
+                            <img src="./news/res1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news">
+                        <div class="news-txt team">
+                            <p>TAIGA針葉林</p>
+                            <p>聯名商品</p>
+                            <p>上架日:111/10/29</p>
+                        </div>
+                        <div class="news-pic team-pic">
+                            <img src="./news/res1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news">
+                        <div class="news-txt team">
+                            <p>TAIGA針葉林</p>
+                            <p>聯名商品</p>
+                            <p>上架日:111/10/29</p>
+                        </div>
+                        <div class="news-pic team-pic">
+                            <img src="./news/res1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+
+
+
+
+
+        
         <div class="footer">
             <div class="container">
                 <div class="footer-head">
