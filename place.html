@@ -7,170 +7,19 @@
     <title>門市據點|素拾</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
-    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
-    <style>
-        *{
-            list-style: none;
-            font-family: 'Yaldevi', sans-serif;
-        }
-        a{
-            text-decoration: none;
-        }
-        .wrap{
-            width: 100%;
-            background-color: rgba(251, 249, 236, 1);
-        }
-        .wrap-header{
-            background-color: rgba(186, 204, 174, 1);
-            width: 100%;
-            height: 60px;
-            top:0px;
-            position: fixed;
-            z-index: 10;
-        }
-        .header{
-            margin: auto;
-            width: 1200px;
-            height: 60px;
-            top: 0px;
-            z-index: 9;
-            position: relative;
-        }
-        .logo{
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            top: -4px;
-            bottom: 0px;
-            left: 20px;
-        }
-        .logo img{
-            width: 100%;
-        }
-        .icon-top{
-            display: flex;
-            flex-wrap: wrap;
-            position: absolute;
-            right: 0px;
-            bottom: 40px;
-            align-items: center;
-        }
-        .icon-top li{
-            margin: 0px;
-        }
-        .icon-top li form{
-            width: 120px;
-            display: flex;
-            border: 1px solid #223424;
-            justify-content: center;
-            border-radius: 100px;
-            top: 0px;
-            margin-right: 10px;
-        }
-        .icon-top li form button i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f002";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .icon-top li form input{
-            border: none;
-            background: none;
-            line-height: 18px;
-            width: 80px;
-            margin-top: 0px;   
-        }
-        .icon-top li form input:focus{
-            outline: none;
-        }
-        .icon-top li form button{
-            border: none;
-            background: none;
-            margin: 3px;
-        }
-        .icon-top li:nth-child(2) i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f07a";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .icon-top li:nth-child(3) i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f007";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
+    <link rel="stylesheet" href="alltypes.css">
 
-        .main-nav{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        .header .main-nav li a{
-            font-size: 20px;
-            color: rgb(77, 77, 77);
-            font-weight: bold;
-            margin:10px;
-        }
-        .header .main-nav li a:hover{
-            color: rgb(225, 95, 8);
-        } 
-        .header .main-nav li a img, .main-detail button img{
-            width: 15%;
-            margin: auto;
-            padding-right: 10px;
-        }
-        .main-detail button img{
-            width: 18%;
-        }
-        li{
-            margin: 10px;
-        }
-        .main-detail{
-            position: relative;
-        }
-        .main-detail button{
-            background-color: transparent;
-            border: none;
-            font-size: 20px;
-            color: rgb(77, 77, 77);
-            font-weight: bold;
-            margin-bottom:30px;
-            margin-right: 26px;
-            cursor: pointer;
-        }
-        .main-detail button:hover{
-            color:rgb(225, 95, 8);
-        }
-        .main-detail .pro-item{
-            width: 80px;
-            height: 140px;
-            position: absolute;
-            padding: 10px;
-            line-height: 1.4;
-            top: 35px;
-            left: 35px;
-            border-radius: 0px 0px 5px 5px;
-            display: none;
-        }
-        .main-nav .main-detail:hover > div{
-            background-color: rgb(250, 207, 98);
-            display: block;
-        }
-        .main-nav .main-detail .pro-item a:hover{
-            color: rgb(225, 95, 8);
-        }
-        .wrap{
-            padding-top: 60px;
-        }
+    <!-- ======字型===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
+
+    <!-- ======動畫===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
         .ban{
-            width: 1200px;
-            height: 500px;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
             margin: auto;
             margin-top: 60px;
             /* 65 110 245 290  */
@@ -178,31 +27,55 @@
             url(./head/place2.png) right center/ auto 100%;
         }
         .place-page{
-            height: 500px;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
         }
+        .place-page-mobile{
+            display: none;
+            padding: 30px;
+            margin: auto;
+        }
+        .place-pic-mobile{
+            width: 100%;
+            
+        }
+        .place-pic-mobile img{
+            width: 100%;
+            border-radius: 5px;
+        }
         .place-page h2{
-            font-size:28px;
             border-bottom: 1px solid rgb(85, 85, 85);
-            margin-left: 140px;
+            margin-left: 100px;
             margin-bottom: 30px;
             color: rgb(67, 66, 66);
             font-weight: bold;
         }
         .place-txt{
-            font-size: 22px;
+            font-size: 18px;
             font-family: 'Yaldevi', sans-serif;
-            margin-left: 120px;
+            margin-left: 60px;
+            line-height: 1.6;
+            color:rgb(117, 116, 116);
+        }
+        .place-page-mobile h2{
+            margin: 10px;
+            font-size:20px;
+            color: rgb(67, 66, 66);
+            font-weight: bold;
+        }
+        .place-page-mobile p{
+            font-size: 14px;
+            margin: 10px;
             line-height: 1.6;
             color:rgb(117, 116, 116);
         }
         .ban-second{
-            width: 1200px;
-            height: 500px;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
             background-color: #ccc;
             margin: auto;
             margin-top: 60px;
@@ -211,7 +84,6 @@
             url(./head/place3.png) left center/ auto 100%;
         }
         .place-page-2{
-            height: 500px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -219,23 +91,22 @@
             align-items: flex-end;
         }
         .place-page-2 h2{
-            font-size:28px;
             border-bottom: 1px solid rgb(85, 85, 85);
-            margin-right: 280px;
+            margin-right: 180px;
             margin-bottom: 30px;
             color: rgb(67, 66, 66);
             font-weight: bold;
         }
         .place-txt-2{
-            font-size: 22px;
             font-family: 'Yaldevi', sans-serif;
-            margin-right: 120px;
+            margin-right: 40px;
             line-height: 1.6;
             color:rgb(117, 116, 116);
         }
         .ban-third{
-            width: 1200px;
-            height: 500px;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
             margin: auto;
             margin-top: 60px;
             margin-bottom: 60px;
@@ -243,110 +114,104 @@
             background: linear-gradient(70deg,#D2DDC5 48%, transparent 43%) center center/100% 100%,
             url(./head/place4.jpg) right center/ auto 100%;
         }
-        .footer{
-            width: 100%;
-            background-color: rgba(186, 204, 174, 1);
+        
+        @media screen and (max-width:767px) {
+            .place-page{
+                height: 300px;
+            }
+            .ban, .ban-second, .ban-third{
+                display: none;
+            }
+            .ban-second{
+                display: none;
+            }
+            .place-page-mobile{
+                display: block;
+            }
+            
+            
         }
-        .content{
-            width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
+        @media screen and (min-width:768px){
+            .place-page, .place-page-2{
+                height: 400px;
+            }
+            .place-page h2{
+                font-size:26px;
+                margin-left: 140px;
+            }
+            .place-page-2 h2{
+                font-size:26px;
+            }
+            .place-txt, .place-txt-2{
+                font-size: 20px;
+            }
         }
-        .footer-head{
-            display: flex;
-            width: 1200px;
-        }
-        .footer-item{
-            width: 0;
-            flex-grow: 1;
-            margin:10px;
-        }
-        .footer-item h3{
-            font-size: 18px;
-            color:rgb(61, 61, 61);
-            margin: 10px;
-        }
-        .footer-item a{
-            color:rgb(61, 61, 61);
-        }
-        .footer-item nav{
-            display: flex;
-            flex-direction: column;
-            margin-left: 30px;
-        }
-        .footer-item nav a{
-            font-size: 16px;
-            color:rgb(74, 74, 74);
-            margin: 5px;
-        }
-        .copyright{
-            text-align:center;
-            width: 100%;
-            color: #8a8a8a;
-        }
-        .footer-item-icon{
-            height: 60px;
-            margin: auto;
-            padding: 20px;
-        }
-        .footer-item-icon a:nth-child(1){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f09a";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-icon a:nth-child(2){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f16d";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-icon a:nth-child(3){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f3c0";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-logo{
-            width: 80px;
-            height: 80px;
-            margin: auto;
-            margin-right: 20px;
-        }
-        .footer-item-logo img{
-            width: 100%;
+        @media screen and (min-width:1200px){
+            .place-page, .place-page-2{
+                height: 500px;
+            }
+            .place-page h2{
+                font-size:28px;
+            }
+            .place-page-2 h2{
+                font-size:28px;
+                margin-right: 280px;
+            }
+            .place-txt{
+                font-size: 22px;
+                margin-left: 100px;
+            }
+            .place-txt-2{
+                font-size: 22px;
+                margin-right: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="wrap-header">
-            <div class="header">
+            <input type="checkbox" name="" id="menu-switch">
+            <nav class="header">
+                <!-- logo -->
                 <div class="logo">
                     <a href="index.html">
                         <img src="./head/logo.png" alt="">
                     </a>
                 </div>
+                <!-- 漢堡 -->
+                <label for="menu-switch" class="hb">
+                    <span class="menu-switch-menu"></span>
+                    <span class="menu-switch-menu"></span>
+                    <span class="menu-switch-menu"></span>
+                </label>
+                <!-- 選單 -->
                 <ul class="main-nav">
                     <li>
-                        <a href=""><img src="./head/icon-leaves.png" alt="">熱銷排行榜</a>
+                        <a href="hot.html">
+                            <img src="./head/icon-leaves.png" alt="">熱銷排名
+                        </a>
                     </li>
-                    <li class="main-detail">
-                        <button><img src="./head/icon-leaves.png" alt="">產品分類</button>
-                        <div class="pro-item">
-                            <a href="rice.html">主食類</a>
-                            <a href="rice.html">素料理</a>
-                            <a href="rice.html">拌醬類</a>
-                            <a href="rice.html">湯底</a>
-                            <a href="rice.html">零嘴</a>
-                        </div>
+                    <li class="sub-nav">
+                        <a href="#"><img src="./head/icon-leaves.png" alt="">產品分類</a>
+                        <!-- ========sub-nav========= -->
+                        <ol>
+                            <li>
+                                <a href="rice.html">主食類</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">素料理</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">拌醬類</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">湯底</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">零嘴</a>
+                            </li>
+                        </ol>
                     </li>
                     <li>
                         <a href="place.html"><img src="./head/icon-leaves.png" alt="">門市據點</a>
@@ -354,103 +219,162 @@
                     <li>
                         <a href="news.html"><img src="./head/icon-leaves.png" alt="">最新消息</a>
                     </li>
-                    <ul class="icon-top">
-                        <li>
-                            <form action="">
-                                <label for="sea"></label>
-                                <input type="search" id="sea" placeholder="搜尋">
-                                <button><i class="fa-regular fa-magnifying-glass"></i></i></button>
-                            </form>
-                        </li>
-                        <li>
-                            <a href="shoppingcart.html">
-                                <i class="fa-regular fa-cart-shopping"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.html">
-                                <i class="fa-regular fa-user"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">網紅推薦</a>
+                    </li> 
                 </ul>
+                <!--=====login-user-cart-icon===== -->
+                <ul class="icon-top">
+                    <li>
+                        <form action="">
+                            <label for="sea"></label>
+                            <input type="search" id="sea" placeholder="搜尋">
+                            <button><i class="fa-regular fa-magnifying-glass"></i></i></button>
+                        </form>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div data-aos="flip-left">
+            <div class="ban">
+                <div class="place-page">
+                    <h2>
+                        板橋創始店
+                    </h2>
+                    <div class="place-txt">
+                        <p>
+                            營業時間:9:00~20:00<br>
+                            電話:(02)1234-5678<br>
+                            新北勢板橋區縣民大道三段123號1樓
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="ban">
-            <div class="place-page">
+        <div data-aos="zoom-in-up">
+            <div class="place-page-mobile">
+                <div class="place-pic-mobile">
+                    <img src="./head/place2.png" alt="">
+                </div>
                 <h2>
                     板橋創始店
                 </h2>
-                <div class="place-txt">
-                    <p>
-                        營業時間:9:00~20:00<br>
-                        電話:(02)1234-5678<br>
-                        新北勢板橋區縣民大道三段123號1樓
-                    </p>
+                <p>
+                    營業時間:9:00~20:00<br>
+                    電話:(02)1234-5678<br>
+                    新北勢板橋區縣民大道三段123號1樓
+                </p>
+            </div>
+        </div>
+        <div data-aos="flip-right">
+            <div class="ban-second">
+                <div class="place-page-2">
+                    <h2>
+                        台中中港店
+                    </h2>
+                    <div class="place-txt-2">
+                        <p>
+                            營業時間:9:00~20:00<br>
+                            電話:(04)8765-4321<br>
+                            台中市西屯區台灣大道三段301號
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="ban-second">
-            <div class="place-page-2">
+        <div data-aos="zoom-in-up">
+            <div class="place-page-mobile">
+                <div class="place-pic-mobile">
+                    <img src="./head/place3.png" alt="">
+                </div>
                 <h2>
                     台中中港店
                 </h2>
-                <div class="place-txt-2">
-                    <p>
-                        營業時間:9:00~20:00<br>
-                        電話:(04)8765-4321<br>
-                        台中市西屯區台灣大道三段301號
-                    </p>
+                <p>
+                    營業時間:9:00~20:00<br>
+                    電話:(04)8765-4321<br>
+                    台中市西屯區台灣大道三段301號
+                </p>
+            </div>
+        </div>
+        <div data-aos="flip-left">
+            <div class="ban-third">
+                <div class="place-page">
+                    <h2>
+                        高雄漢神店
+                    </h2>
+                    <div class="place-txt">
+                        <p>
+                            營業時間:9:00~20:00<br>
+                            電話:(07)5555-6666<br>
+                            高雄市左營區博愛二路777號
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="ban-third">
-            <div class="place-page">
+        <div data-aos="zoom-in-up">
+            <div class="place-page-mobile">
+                <div class="place-pic-mobile">
+                    <img src="./head/place4.jpg" alt="">
+                </div>
                 <h2>
                     高雄漢神店
                 </h2>
-                <div class="place-txt">
-                    <p>
-                        營業時間:9:00~20:00<br>
-                        電話:(07)5555-6666<br>
-                        高雄市左營區博愛二路777號
-                    </p>
-                </div>
+                <p>
+                    營業時間:9:00~20:00<br>
+                    電話:(07)5555-6666<br>
+                    高雄市左營區博愛二路777號
+                </p>
             </div>
         </div>
         <div class="footer">
-            <div class="content">
+            <div class="container">
                 <div class="footer-head">
-                    <div class="footer-item">
-                        <h3><a href="aboutus.html">關於我們</a></h3>
-                        <nav>
-                            <a href="aboutus.html">品牌故事</a>
-                            <a href="place.html">門市據點</a>
-                        </nav>
+                    <div class="footer-head-up">
+                        <div class="footer-item">
+                            <h3><a href="aboutus.html">關於我們</a></h3>
+                            <nav>
+                                <a href="aboutus.html">品牌故事</a>
+                                <a href="place.html">門市據點</a>
+                            </nav>
+                        </div>
+                        <div class="footer-item">
+                            <h3>購物說明</h3>
+                            <nav>
+                                <a href="#">付款方式</a>
+                                <a href="#">運送方式</a>
+                            </nav>
+                        </div>
+                        <div class="footer-item">
+                            <h3>客服資訊</h3>
+                            <nav>
+                                <a href="contact.html">信箱留言</a>
+                                <a href="contact.html">聯絡我們</a>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="footer-item">
-                        <h3>購物說明</h3>
-                        <nav>
-                            <a href="#">付款方式</a>
-                            <a href="#">運送方式</a>
-                        </nav>
-                    </div>
-                    <div class="footer-item">
-                        <h3>客服資訊</h3>
-                        <nav>
-                            <a href="contact.html">信箱留言</a>
-                            <a href="contact.html ">聯絡我們</a>
-                        </nav>
-                    </div>
-                    <div class="footer-item-icon">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-line"></i></a>
-                    </div>
-                    <div class="footer-item-logo">
-                        <a href="index.html">
-                            <img src="./head/logo.png" alt="">
-                        </a>
+                    <div class="footer-head-down">
+                        <div class="footer-item-icon">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-line"></i></a>
+                        </div>
+                        <div class="footer-item-logo">
+                            <a href="index.html">
+                                <img src="./head/logo.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="copyright">
@@ -460,5 +384,16 @@
         </div>
     </div>
     
+
+    <!-- ======字型icon======= -->
+    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+
+    <!-- ======動畫===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="all.js"></script>
 </body>
 </html>
