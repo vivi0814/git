@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="alltypes.css">
+    <link rel="stylesheet" href="newss.css">
 
     <!-- ======字型===== -->
     <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
@@ -15,87 +16,6 @@
     <!-- ======動畫===== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <style>
-        h2{
-            width: 100%;
-            font-size: 30px;
-            margin-top: 50px;
-            margin-left: 50px;
-            font-weight: bold;
-            color: rgb(67, 66, 66);
-        }
-        hr.style-cart{
-            width: 40%;
-            margin-left: 50px;
-            height: 2px;
-            border: 0;
-            margin-top: 4px;
-            background-color: rgba(151, 151, 151, 0.75);
-        }
-        .news{
-            width: 1200px;
-            padding: 10px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
-
-        }
-        .news-pic{
-            width: 800px;
-            height: 450px;
-            overflow: hidden;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .news-pic img{
-            object-position: center center;
-            width: 100%;
-        }
-        .news-txt{
-            width: 280px;
-            height: 250px;
-            margin-top: 70px;
-            background-color:rgba(253, 230, 189, 0.8);
-        }
-        .news-txt p{
-            font-size: 26px;
-            color:rgb(117, 116, 116);
-            margin: 40px 40px 50px 40px;
-        }
-        .news-txt:nth-child(1){
-            width: 350px;
-            height: 250px;
-            background-color:rgba(223, 183, 157, 1);
-        }
-        .news-txt:nth-child(1) p{
-            margin-left: 80px;
-        }
-        @media screen and (max-width:767px) {
-
-        }
-
-        @media screen and (min-width:768px){
-            h2{
-                font-size: 35px;
-            }
-            hr.style-cart{
-                width: 20%;
-            }
-        }
-
-        @media screen and (min-width:1200px){
-            h2{
-                font-size: 40px;
-            }
-        }
-
-    
-
-
-
-
-    </style>
 </head>
 <body>
     <div class="wrap">
@@ -174,29 +94,230 @@
                 </ul>
             </nav>
         </div>
+        <div class="top-view"></div>
         <div class="container">
             <h2>素拾去市集</h2>
             <hr class="style-cart"/>
-            <div class="news">
-                <div class="news-pic">
-                    <img src="./news/market.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="zoom-in-up">
+                        <div class="news">
+                            <div class="news-pic">
+                                <a href="#">
+                                    <img src="./news/market22.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="news-txt">
+                                <p class="news-txt-title">世界素食日</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        時間:111/10/1
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        地點:南港展覽館
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">穿梭市集你會結識擁有獨特主張的攤主，發現觸動靈魂的新舊物件，或是購得產地直送的時令蔬菜。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-txt">
-                    <p>世界素食日</p>
-                    <p>時間:111/10/1</p>
-                    <p>地點:南港展覽館</p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="zoom-in-up">
+                        <div class="news">
+                            <div class="news-pic">
+                                <a href="#">
+                                    <img src="./news/mar33.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="news-txt">
+                                <p class="news-txt-title">素界真美妙</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        時間:111/09/20
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        地點:花博園區
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">豐富多樣的特色商品，加上融入文化性質的展演活動，吸引外來遊客造訪，也讓在地人重新看待自己成長的地方。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="zoom-in-up">
+                        <div class="news">
+                            <div class="news-pic">
+                                <a href="#">
+                                    <img src="./news/mar5.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="news-txt">
+                                <p class="news-txt-title">素素加入</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        時間:112/08/17
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        地點:台北站前廣場
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">這不只是市集，還有文化的串聯，維持了舊有特色，還發展了新的元素。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <h2>素拾有合作</h2>
             <hr class="style-cart"/>
-            <div class="news">
-                <div class="news-txt">
-                    <p>TAIGA針葉林</p>
-                    <p>聯名商品</p>
-                    <p>上架日:111/10/29</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="flip-up">
+                        <div class="news">
+                            <div class="news-txt team">
+                                <p class="news-txt-title">TAIGA針葉林</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        麻油猴頭菇
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        上架日:111/10/29
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">麻油老薑，噴香湯頭擄獲你的味蕾，特選上等麻油，使湯汁飽含鄉天芝麻香氣</p>
+                            </div>
+                            <div class="news-pic team-pic">
+                                <a href="#">
+                                    <img src="./news/res11.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-pic">
-                    <img src="./news/res1.jpg" alt="">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="flip-up">
+                        <div class="news">
+                            <div class="news-txt team">
+                                <p class="news-txt-title">吾旺載祭</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        麻辣臭豆腐
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        上架日:112/03/29
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">使用蔬果天然發酵而成的臭豆腐，搭配主廚對於花椒和辣椒的掌握與運用</p>
+    
+                            </div>
+                            <div class="news-pic team-pic">
+                                <a href="#">
+                                    <img src="./news/res33.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="flip-up">
+                        <div class="news">
+                            <div class="news-txt team">
+                                <p class="news-txt-title">大三元</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        南洋咖哩湯麵
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        上架日:111/05/20
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">使用蔬果天然發酵而成的臭豆腐，搭配主廚對於花椒和辣椒的掌握與運用</p>
+                            </div>
+                            <div class="news-pic team-pic">
+                                <a href="#">
+                                    <img src="./news/res22.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="flip-up">
+                        <div class="news">
+                            <div class="news-txt team">
+                                <p class="news-txt-title">米鄉</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        素食佛跳牆
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        上架日:111/09/26
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">以台式經典佛跳牆的烹調手法，將菌菇、筍子、栗子、芋頭與藥材細火慢燉。</p>
+                            </div>
+                            <div class="news-pic team-pic">
+                                <a href="#">
+                                    <img src="./news/res44.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="flip-up">
+                        <div class="news">
+                            <div class="news-txt team">
+                                <p class="news-txt-title">侯步熊</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        酪梨舒芙蕾
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        上架日:111/08/25
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">蔬食套餐以酪梨為主體，將其奶油般絲滑的質地，完整襯托於前菜與甜點中。</p>
+    
+                            </div>
+                            <div class="news-pic team-pic">
+                                <a href="#">
+                                    <img src="./news/res55.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div data-aos="flip-up">
+                        <div class="news">
+                            <div class="news-txt team">
+                                <p class="news-txt-title">頤恭</p>
+                                <div class="news-txt-detail">
+                                    <p class="news-txt-time">
+                                        冬瓜釀官燕
+                                    </p> 
+                                    <p class="news-txt-place">
+                                        上架日:111/07/23
+                                    </p>    
+                                </div>
+                                <p class="news-txt-intro">主餐的什菌炒米麵，打破粵菜框架，將煸炒過的義大利米型麵，淋上特製什菌芡汁，中西融合。</p>
+    
+                            </div>
+                            <div class="news-pic team-pic">
+                                <a href="#">
+                                    <img src="./news/res66.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,136 @@
+.wrap{
+    overflow: hidden;
+}
+h2{
+    width: 80%;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-weight: bold;
+    color: rgb(67, 66, 66);
+}
+.top-view{
+    padding-top: 70px;
+    background-image: url(./news/top33.jpg);
+    width: 99%;
+    margin: auto;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* overflow: hidden; */
+}
+hr.style-cart{
+    width: 40%;
+    margin-left: 50px;
+    height: 2px;
+    border: 0;
+    margin-top: 4px;
+    background-color: rgba(151, 151, 151, 0.75);
+}
+.news{
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.news-pic{
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: auto;
+}
+.news-pic img{
+    width: 100%;
+    vertical-align: middle;
+    transition: 0.8s;
+}
+.news-pic img:hover{
+    transform: scale(1.1);
+}
+.news-txt{
+    width: 80%;
+    margin: auto;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.news-txt-title{
+    font-size: 20px;
+    color:rgb(117, 117, 116);
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.8s;
+    overflow: hidden;
+}
+.news-txt:hover>.news-txt-title{
+    color:rgb(255, 183, 0);
+    transform: scale(1.02);
+    
+}
+.news-txt-detail{
+    /* display: flex; */
+    justify-content: space-between;
+    margin: 10px;
+}
+.news-txt-detail p{
+    font-size: 14px;
+    color:rgb(117, 117, 116);
+}
+.news-txt-intro{
+    margin: 10px;
+    color:rgb(117, 117, 116);
+}
+
+
+@media screen and (max-width:767px) {
+    .news-txt{
+        text-align: center;
+    }
+    .news-txt-intro{
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px){
+    h2{
+        font-size: 35px;
+    }
+    hr.style-cart{
+        width: 20%;
+    }
+    .news{
+        flex-direction: column;
+        /* margin: 50px; */
+    }
+    .news-pic{
+        width: 80%;
+    }
+    .news .news-txt.team-pic{
+        order: 1;
+    }
+    .news .news-txt.team{
+        order: 2;
+    }
+    .news-txt-detail{
+        display: flex;
+    }
+    .news-txt-title{
+        font-size: 24px;
+    }
+    .news-txt-detail p{
+        font-size: 16px;
+    }
+    .news-txt-intro{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    h2{
+        font-size: 40px;
+    }
+    
+    
+}

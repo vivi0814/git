@@ -7,551 +7,59 @@
     <title>結帳區|素拾</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
-    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="alltypes.css">
+    <link rel="stylesheet" href="pay.css">
+
+    <!-- ======字型===== -->
     <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
-    <style>
-        *{
-            list-style: none;
-            font-family: 'Yaldevi', sans-serif;
-        }
-        a{
-            text-decoration: none;
-        }
-        .wrap{
-            width: 100%;
-            background-color: rgba(251, 249, 236, 1);
-        }
-        .wrap-header{
-            background-color: rgba(186, 204, 174, 1);
-            width: 100%;
-            height: 60px;
-            top:0px;
-            position: fixed;
-            z-index: 10;
-        }
-        .header{
-            margin: auto;
-            width: 1200px;
-            height: 60px;
-            top: 0px;
-            z-index: 9;
-            position: relative;
-            
-        }
-        .logo{
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            top: -4px;
-            bottom: 0px;
-            left: 20px;
-        }
-        .logo img{
-            width: 100%;
-        }
-        .icon-top{
-            display: flex;
-            flex-wrap: wrap;
-            position: absolute;
-            right: 0px;
-            bottom: 40px;
-            align-items: center;
-        }
-        .icon-top li{
-            margin: 0px;
-        }
-        .icon-top li form{
-            width: 120px;
-            display: flex;
-            border: 1px solid #223424;
-            justify-content: center;
-            border-radius: 100px;
-            top: 0px;
-        }
-        .icon-top li form button i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f002";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .icon-top li form input{
-            border: none;
-            background: none;
-            line-height: 18px;
-            width: 80px;
-            margin-top: 0px;   
-        }
-        .icon-top li form input:focus{
-            outline: none;
-        }
-        .icon-top li form button{
-            border: none;
-            background: none;
-            margin: 3px;
-        }
-        .icon-top li:nth-child(2) i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f07a";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .icon-top li:nth-child(3) i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f007";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .main-nav{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        .header .main-nav li a{
-            font-size: 20px;
-            color: rgb(77, 77, 77);
-            font-weight: bold;
-            margin:10px;
-        }
-        .header .main-nav li a:hover{
-            color: rgb(225, 95, 8);
-        } 
-        .header .main-nav li a img, .main-detail button img{
-            width: 15%;
-            margin: auto;
-            padding-right: 10px;
-        }
-        .main-detail button img{
-            width: 18%;
-        }
-        li{
-            margin: 10px;
-        }
-        .main-detail{
-            position: relative;
-        }
-        .main-detail button{
-            background-color: transparent;
-            border: none;
-            font-size: 20px;
-            color: rgb(77, 77, 77);
-            font-weight: bold;
-            margin-bottom:30px;
-            margin-right: 26px;
-            cursor: pointer;
-        }
-        .main-detail button:hover{
-            color:rgb(225, 95, 8);
-        }
-        .main-detail .pro-item{
-            width: 80px;
-            height: 140px;
-            position: absolute;
-            padding: 10px;
-            line-height: 1.4;
-            top: 35px;
-            left: 35px;
-            border-radius: 0px 0px 5px 5px;
-            display: none;
-        }
-        .main-nav .main-detail:hover > div{
-            background-color: rgb(250, 207, 98);
-            display: block;
-        }
-        .main-nav .main-detail .pro-item a:hover{
-            color: rgb(225, 95, 8);
-        }
-        .wrap{
-            padding-top: 60px;
-        }
-        .content{
-            width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .content h1{
-            width: 1200px;
-            font-size: 40px;
-            margin: auto;
-            margin-top: 30px;
-            text-align: center;
-            font-weight: bold;
-            color: rgb(67, 66, 66);
-        }
-        hr.style-cart{
-            width: 20%;
-            margin: auto;
-            height: 2px;
-            border: 0;
-            margin-top: 4px;
-            background-color: rgba(151, 151, 151, 0.75);
-        }
-        .cart-title{
-            width: 1200px;
-            display: flex;
-            justify-content: center;
-        }
-        .cart-title h2{
-            font-size: 26px;
-            margin-top: 40px;
-            margin-bottom: 5px;
-            margin-right: 35px;
-            color: rgb(117, 116, 116);
-        }
-        .cart-title h2:nth-child(1){
-            width: 430px;
-            text-align: center;
-        }
-        .cart-title h2:nth-child(2){
-            width: 100px;
-            text-align: center;
-        }
-        .cart-title h2:nth-child(3){
-            width: 180px;
-            text-align: center;
-        }
-        .cart-title h2:nth-child(4){
-            width: 180px;
-            text-align: center;
-        }
-        hr.style-one{
-            border: 0;
-            border-radius: 2px;
-            width: 90%;
-            margin: auto;
-            height: 2px;
-            background-color: rgba(151, 151, 151, 0.75);
-        }
-        .cart-item-list{
-            display: flex;
-            margin: 10px;
-            padding: 10px 60px;
-        }
-        .cart-item-background{
-            background-color: rgba(253, 230, 189, 0.6);
-            display: flex;
-            border-radius: 0px 20px 20px 0px;
-        }
-        .cart-item-background-2{
-            background-color: rgba(210, 221, 197, 0.8);
-            display: flex;
-            border-radius: 0px 20px 20px 0px;
-        }
-        .cart-item-list-pic{
-            width: 250px;
-            height: 150px;
-            object-fit: cover;
-            object-position: center center;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-        .cart-item-list-pic img{
-            width: 100%;
-        }
-        .cart-item-list-name{
-            width: 180px;
-            height: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            letter-spacing: 2px;
-        }
-        .cart-item-list-name a{
-            color:rgb(117, 116, 116);
-        }
-        .cart-item-list-price{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100px;
-            height: 150px;
-            font-size: 20px;
-            font-family: 'Yaldevi', sans-serif; 
-            margin-left: 50px;
-        }
-        .cart-item-list-amount{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 180px;
-            height: 150px;
-            font-size: 20px;
-            font-family: 'Yaldevi', sans-serif;
-            margin-left: 40px;
-        }
-        .cart-item-list-amount span{
-            margin: 0px 20px;
-            cursor: pointer;
-        }
-        .cart-item-list-amount .minus i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f068";
-            font-size: 15px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .cart-item-list-amount .plus i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\2b";
-            font-size: 15px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .cart-item-list-smalltotal{
-            display: flex;
-            width: 150px;
-            height: 150px;
-            font-size: 20px;
-            justify-content: center;
-            align-items: center;
-            margin-left: 50px;
-            font-family: 'Yaldevi', sans-serif;
-            margin-left: 40px;
-        }
-        .cart-item-list button{
-            border: none;
-            background: none;
-            cursor: pointer;
-            margin-right: 50px;
-        }
-        .cart-item-list button i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f00d";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .cart-total{
-            width: 1200px;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            margin: 10px 20px;
-        }
-        .cart-total-txt{
-            font-size: 25px;
-            margin: 20px;
-            margin-right: 30px;
-            color:rgb(117, 116, 116);
-        }
-        .cart-total-price{
-            font-size: 25px;
-            margin: 20px;
-            margin-right: 170px;
-            color:rgb(117, 116, 116);
-            font-family: 'Yaldevi', sans-serif;
-        }
-        .cart-pay-now{
-            text-align: center;
-            width: 150px;
-            height: 50px;
-            background-color: rgba(255, 215, 114, 1);
-            border-radius: 5px;
-            border: none;
-            box-shadow: 2px 2px 2px 0px #909090; 
-            transition: .3s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            margin-bottom: 30px;
-        }
-        .cart-pay-now:hover{
-            background-color: rgb(255, 183, 0);
-            transform: scale(1.05);
-        }
-        .cart-pay-now:active{
-            transform: scale(1);
-            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
-        }
-        .cart-pay-now a{
-            font-size: 25px;
-            color:rgb(117, 116, 116);
-            font-weight: bold;
-        }
-        .pay-document{
-            width: 88%;
-            margin: auto;
-            padding: 20px;
-            background-color: rgba(210, 221, 197, 0.8);
-            border-radius: 20px;
-            margin: 20px;
-            margin-left: 45px;
-        }
-        .pay-document h3{
-            font-size: 25px;
-            margin-left: 100px;
-            color: rgb(67, 66, 66);
-        }
-        .pay-document-txt{
-            width: 1200px;
-            height: 160px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            padding: 10px;
-        }
-        .pay-document-txt div{
-            margin: 10px;
-            margin-right: 570px;
-            font-size: 20px;
-            color:rgb(117, 116, 116);
-        }
-        .pay-document-txt div label input{
-            border-radius: 20px;
-            border: none;
-            height: 25px;
-        }
-        .card-txt{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .card-txt div{
-            margin: 20px;
-            font-size: 20px;
-            color:rgb(117, 116, 116);
-        }
-        .card-number{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px;
-            font-size: 20px;
-            color:rgb(117, 116, 116);
-        }
-        .card-number label input{
-            width: 60px;
-            margin: 0px 5px;
-            border-radius: 5px;
-            border: none;
-        }
-        .card-date{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 50px;
-            font-size: 20px;
-            color:rgb(117, 116, 116);
-        }
-        .card-date label{
-            margin: 20px;
-        }
-        .card-date label input{
-            text-align: center;
-            width: 50px;
-            margin: 0px 10px;
-            border-radius: 5px;
-            border: none;
-        }
-        input.pay-input{
-            outline: none;
-            text-align: center;
-        }
-        .footer{
-            width: 100%;
-            background-color: rgba(186, 204, 174, 1);
-        }
-        .footer-head{
-            display: flex;
-            width: 1200px;
-        }
-        .footer-item{
-            width: 0;
-            flex-grow: 1;
-            margin:10px;
-        }
-        .footer-item h3{
-            font-size: 18px;
-            color:rgb(61, 61, 61);
-            margin: 10px;
-        }
-        .footer-item a{
-            color:rgb(61, 61, 61);
-        }
-        .footer-item nav{
-            display: flex;
-            flex-direction: column;
-            margin-left: 30px;
-        }
-        .footer-item nav a{
-            font-size: 16px;
-            color:rgb(74, 74, 74);
-            margin: 5px;
-        }
-        .copyright{
-            text-align:center;
-            width: 100%;
-            color: #8a8a8a;
-        }
-        .footer-item-icon{
-            height: 60px;
-            margin: auto;
-            padding: 20px;
-        }
-        .footer-item-icon a:nth-child(1){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f09a";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-icon a:nth-child(2){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f16d";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-icon a:nth-child(3){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f3c0";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-logo{
-            width: 80px;
-            height: 80px;
-            margin: auto;
-            margin-right: 20px;
-        }
-        .footer-item-logo img{
-            width: 100%;
-        }
-    </style>
+
+    <!-- ======動畫===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="wrap">
         <div class="wrap-header">
-            <div class="header">
-                <div class="logo">
+            <input type="checkbox" name="" id="menu-switch">
+            <nav class="header">
+                <!-- logo -->
+                <h1 class="logo">
                     <a href="index.html">
                         <img src="./head/logo.png" alt="">
                     </a>
-                </div>
+                </h1>
+                <!-- 漢堡 -->
+                <label for="menu-switch" class="hb">
+                    <span class="menu-switch-menu"></span>
+                    <span class="menu-switch-menu"></span>
+                    <span class="menu-switch-menu"></span>
+                </label>
+                <!-- 選單 -->
                 <ul class="main-nav">
                     <li>
-                        <a href="hot.html"><img src="./head/icon-leaves.png" alt="">熱銷排行榜</a>
+                        <a href="hot.html">
+                            <img src="./head/icon-leaves.png" alt="">熱銷排名
+                        </a>
                     </li>
-                    <li class="main-detail">
-                        <button><img src="./head/icon-leaves.png" alt="">產品分類</button>
-                        <div class="pro-item">
-                            <a href="rice.html">主食類</a>
-                            <a href="rice.html">素料理</a>
-                            <a href="rice.html">拌醬類</a>
-                            <a href="rice.html">湯底</a>
-                            <a href="rice.html">零嘴</a>
-                        </div>
+                    <li class="sub-nav">
+                        <a href="#"><img src="./head/icon-leaves.png" alt="">產品分類</a>
+                        <!-- ========sub-nav========= -->
+                        <ol>
+                            <li>
+                                <a href="rice.html">主食類</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">素料理</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">拌醬類</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">湯底</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">零嘴</a>
+                            </li>
+                        </ol>
                     </li>
                     <li>
                         <a href="place.html"><img src="./head/icon-leaves.png" alt="">門市據點</a>
@@ -559,109 +67,129 @@
                     <li>
                         <a href="news.html"><img src="./head/icon-leaves.png" alt="">最新消息</a>
                     </li>
-                    <ul class="icon-top">
-                        <li>
-                            <form action="">
-                                <label for="sea"></label>
-                                <input type="search" id="sea" placeholder="搜尋">
-                                <button><i class="fa-regular fa-magnifying-glass"></i></i></button>
-                            </form>
-                        </li>
-                        <li>
-                            <a href="shoppingcart.html">
-                                <i class="fa-regular fa-cart-shopping"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.html">
-                                <i class="fa-regular fa-user"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">網紅推薦</a>
+                    </li> 
                 </ul>
-            </div>
+                <!--=====login-user-cart-icon===== -->
+                <ul class="icon-top">
+                    <li>
+                        <form action="">
+                            <label for="sea"></label>
+                            <input type="search" id="sea" placeholder="搜尋">
+                            <button><i class="fa-regular fa-magnifying-glass"></i></i></button>
+                        </form>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="content">
-            <h1>訂單明細</h1>
+        <div class="container">
+            <h2>購物車</h2>
             <hr class="style-cart"/>
             <div class="cart-title">
-                <h2>商品</h2>
-                <h2>價格</h2>
-                <h2>數量</h2>
-                <h2>小計</h2>
+                <h3 class="cart-title-name"></h3>
+                <h3 class="cart-title-name">商品</h3>
+                <h3 class="cart-title-name">價格</h3>
+                <h3 class="cart-title-name">數量</h3>
+                <h3 class="cart-title-name">小計</h3>
             </div>
             <hr class="style-one"/>
             <div class="cart-item">
                 <div class="cart-item-list">
-                    <div class="cart-item-list-pic">
-                        <a href="product-detail.html">
-                            <img src="./product-detail/spicy-pro2.jpg" alt="">
-                        </a>
+                    <div class="cart-item-list-product">
+                        <div class="cart-item-list-product-pic">
+                            <a href="product-detail.html">
+                                <img src="./product-detail/spicy-pro2.jpg" alt="">
+                            </a>
+                        </div>
                     </div>
-                    <div class="cart-item-background">
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-name">
                             <p><a href="product-detail.html">天香麻辣醬</a> </p>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-price">
                             <p>$230</p>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-amount">
                             <p><span class="minus"><i class="fa-regular fa-minus"></i></span>1<span class="plus"><i class="fa-regular fa-plus"></i></span></p>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-smalltotal">
                             <p>$230</p>
                         </div>
-                        <button type="button">
-                            <i class="fa-light fa-xmark"></i>
-                        </button>
                     </div>
                 </div>
                 <div class="cart-item-list">
-                    <div class="cart-item-list-pic">
-                        <a href="product-detail.html">
-                            <img src="./product-detail/curr.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="cart-item-background-2">
-                        <div class="cart-item-list-name">
-                            <p><a href="product-detail.html"> 南洋咖哩湯麵</a></p>
+                    <div class="cart-item-list-product">
+                        <div class="cart-item-list-product-pic">
+                            <a href="product-detail.html">
+                                <img src="./product-detail/curr.jpg" alt="">
+                            </a>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
+                        <div class="cart-item-list-name">
+                            <p><a href="product-detail.html"> 南洋咖哩麵</a></p>
+                        </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-price">
                             <p>$250</p>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-amount">
                             <p><span class="minus"><i class="fa-regular fa-minus"></i></span>1<span class="plus"><i class="fa-regular fa-plus"></i></span></p>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-smalltotal">
                             <p>$250</p>
                         </div>
-                        <button type="button">
-                            <i class="fa-light fa-xmark"></i>
-                        </button>
                     </div>
                 </div>
                 <div class="cart-item-list">
-                    <div class="cart-item-list-pic">
-                        <a href="product-detail.html">
-                            <img src="./product-detail/mush.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="cart-item-background">
-                        <div class="cart-item-list-name">
-                            <p><a href="product-detail.html">老薑麻油猴頭菇</a></p>
+                    <div class="cart-item-list-product">
+                        <div class="cart-item-list-product-pic">
+                            <a href="product-detail.html">
+                                <img src="./product-detail/mush.jpg" alt="">
+                            </a>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
+                        <div class="cart-item-list-name">
+                            <p><a href="product-detail.html">老薑猴頭菇</a></p>
+                        </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-price">
                             <p>$250</p>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-amount">
                             <p><span class="minus"><i class="fa-regular fa-minus"></i></span>1<span class="plus"><i class="fa-regular fa-plus"></i></span></p>
                         </div>
+                    </div>
+                    <div class="cart-item-list-product">
                         <div class="cart-item-list-smalltotal">
                             <p>$250</p>
                         </div>
-                        <button type="button">
-                            <i class="fa-light fa-xmark"></i>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -674,7 +202,7 @@
                     <p>$730</p>
                 </div>
             </div>
-            <div class="content">
+            <div class="container">
                 <div class="pay-document">
                     <h3>訂購人資料</h3>
                     <form class="pay-document-txt">
@@ -692,7 +220,7 @@
                         </div>
                         <div>
                             <label>
-                                E-mail
+                                信箱
                                 <input type="email" class="pay-input">
                             </label>
                         </div>
@@ -730,20 +258,27 @@
                     </div>
                     <div class="card-number">
                         <label>信用卡號
-                            <input type="text" maxlength="4" class="pay-input">
-                            <input type="text" maxlength="4" class="pay-input">
-                            <input type="text" maxlength="4" class="pay-input">
-                            <input type="text" maxlength="4" class="pay-input">
+                            <div class="card-num-input">
+                                <input type="text" maxlength="4" class="pay-input">
+                                <input type="text" maxlength="4" class="pay-input">
+                                <input type="text" maxlength="4" class="pay-input">
+                                <input type="text" maxlength="4" class="pay-input">
+                            </div>
                         </label>
                     </div>
                     <div class="card-date">
-                        <label>有效日期
-                            <input type="text" name="month" placeholder="MM" maxlength="2" class="pay-input">
-                            <input type="text" name="year" placeholder="YY" maxlength="2" class="pay-input">
+                        <label>
+                            有效日期
+                            <div class="card-date-input">
+                                <input type="text" name="month" placeholder="MM" maxlength="2" class="pay-input">
+                                <input type="text" name="year" placeholder="YY" maxlength="2" class="pay-input">
+                            </div>
                         </label>
                         <label>
                             信用卡安全代碼CVV
-                            <input type="text" name="code" placeholder="XXX" maxlength="3" class="pay-input">
+                            <div class="card-date-input">
+                                <input type="text" name="code" placeholder="XXX" maxlength="3" class="pay-input">
+                            </div>
                         </label>
                     </div>
                 </div>
@@ -752,39 +287,44 @@
                 </div>
             </div>
         </div>
+        
         <div class="footer">
-            <div class="content">
+            <div class="container">
                 <div class="footer-head">
-                    <div class="footer-item">
-                        <h3><a href="aboutus.html">關於我們</a></h3>
-                        <nav>
-                            <a href="aboutus.html">品牌故事</a>
-                            <a href="place.html">門市據點</a>
-                        </nav>
+                    <div class="footer-head-up">
+                        <div class="footer-item">
+                            <h3><a href="aboutus.html">關於我們</a></h3>
+                            <nav>
+                                <a href="aboutus.html">品牌故事</a>
+                                <a href="place.html">門市據點</a>
+                            </nav>
+                        </div>
+                        <div class="footer-item">
+                            <h3>購物說明</h3>
+                            <nav>
+                                <a href="#">付款方式</a>
+                                <a href="#">運送方式</a>
+                            </nav>
+                        </div>
+                        <div class="footer-item">
+                            <h3>客服資訊</h3>
+                            <nav>
+                                <a href="contact.html">信箱留言</a>
+                                <a href="contact.html">聯絡我們</a>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="footer-item">
-                        <h3>購物說明</h3>
-                        <nav>
-                            <a href="#">付款方式</a>
-                            <a href="#">運送方式</a>
-                        </nav>
-                    </div>
-                    <div class="footer-item">
-                        <h3>客服資訊</h3>
-                        <nav>
-                            <a href="contact.html">信箱留言</a>
-                            <a href="contact.html">聯絡我們</a>
-                        </nav>
-                    </div>
-                    <div class="footer-item-icon">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-line"></i></a>
-                    </div>
-                    <div class="footer-item-logo">
-                        <a href="index.html">
-                            <img src="./head/logo.png" alt="">
-                        </a>
+                    <div class="footer-head-down">
+                        <div class="footer-item-icon">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-line"></i></a>
+                        </div>
+                        <div class="footer-item-logo">
+                            <a href="index.html">
+                                <img src="./head/logo.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="copyright">
@@ -792,7 +332,17 @@
                 </div>
             </div>
         </div>
-        
     </div>
+
+    <!-- ======字型icon======= -->
+    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+
+    <!-- ======動畫===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="all.js"></script>
 </body>
 </html>
