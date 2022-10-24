@@ -7,419 +7,61 @@
     <title>熱銷排行榜|素拾</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
-    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="alltypes.css">
+    <link rel="stylesheet" href="hot.css">
+
+    <!-- ======字型===== -->
     <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
-    <style>
-        *{
-            list-style: none;
-            font-family: 'Yaldevi', sans-serif;
-        }
-        a{
-            text-decoration: none;
-        }
-        .wrap{
-            width: 100%;
-            background-color: rgba(251, 249, 236, 1);
-        }
-        .wrap-header{
-            background-color: rgba(186, 204, 174, 1);
-            width: 100%;
-            height: 60px;
-            top:0px;
-            position: fixed;
-            z-index: 10;
-        }
-        .header{
-            margin: auto;
-            width: 1200px;
-            height: 60px;
-            top: 0px;
-            z-index: 9;
-            position: relative;
-            
-        }
-        .logo{
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            top: -4px;
-            bottom: 0px;
-            left: 20px;
-        }
-        .logo img{
-            width: 100%;
-        }
-        .icon-top{
-            display: flex;
-            flex-wrap: wrap;
-            position: absolute;
-            right: 0px;
-            bottom: 40px;
-            align-items: center;
-        }
-        .icon-top li{
-            margin: 0px;
-        }
-        .icon-top li form{
-            width: 120px;
-            display: flex;
-            border: 1px solid #223424;
-            justify-content: center;
-            border-radius: 100px;
-            top: 0px;
-        }
-        .icon-top li form button i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f002";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .icon-top li form input{
-            border: none;
-            background: none;
-            line-height: 18px;
-            width: 80px;
-            margin-top: 0px;   
-        }
-        .icon-top li form input:focus{
-            outline: none;
-        }
-        .icon-top li form button{
-            border: none;
-            background: none;
-            margin: 3px;
-        }
-        .icon-top li:nth-child(2) i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f07a";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .icon-top li:nth-child(3) i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f007";
-            font-size: 18px;
-            color: rgba(103, 103, 103, 1);
-        }
-        .main-nav{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        .header .main-nav li a{
-            font-size: 20px;
-            color: rgb(77, 77, 77);
-            font-weight: bold;
-            margin:10px;
-        }
-        .header .main-nav li a:hover{
-            color: rgb(225, 95, 8);
-        } 
-        .header .main-nav li a img, .main-detail button img{
-            width: 15%;
-            margin: auto;
-            padding-right: 10px;
-        }
-        .main-detail button img{
-            width: 18%;
-        }
-        li{
-            margin: 10px;
-        }
-        .main-detail{
-            position: relative;
-        }
-        .main-detail button{
-            background-color: transparent;
-            border: none;
-            font-size: 20px;
-            color: rgb(77, 77, 77);
-            font-weight: bold;
-            margin-bottom:30px;
-            margin-right: 26px;
-            cursor: pointer;
-        }
-        .main-detail button:hover{
-            color:rgb(225, 95, 8);
-        }
-        .main-detail .pro-item{
-            width: 80px;
-            height: 140px;
-            position: absolute;
-            padding: 10px;
-            line-height: 1.4;
-            top: 35px;
-            left: 35px;
-            border-radius: 0px 0px 5px 5px;
-            display: none;
-        }
-        .main-nav .main-detail:hover > div{
-            background-color: rgb(250, 207, 98);
-            display: block;
-        }
-        .main-nav .main-detail .pro-item a:hover{
-            color: rgb(225, 95, 8);
-        }
-        .wrap{
-            padding-top: 60px;
-        }
-        .content{
-            width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            position: relative;
-            
-        }
-        .side-menu{
-            margin: 30px;
-            width: 150px;
-            height: 300px;
-            flex-direction: column;
-            border-radius: 5px;
-            background-color: #D2DDC5;
-            position: sticky;
-            top: 110px;
-        }
-        .side-menu nav .hot-title{
-            font-weight: bold;
-            color:rgb(225, 95, 8);
-        }
-        .side-menu a{
-            margin: 20px;
-            text-align: left;
-            display: block;
-            font-size: 18px;
-            color: rgb(77, 77, 77);
-        }
-        .side-menu a:hover{
-            color:rgb(225, 95, 8);
-        }
-        .side-menu .side-menu-item a{
-            margin-left: 30px;
-            font-size: 18px;
-            
-        }
-        .side-menu .side-menu-item a:hover{
-            transform: scale(1.05);
-        }
-        .side-menu .side-menu-item a i{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f4d8";
-            font-size: 14px;
-            display: none;
-        }
-        .side-menu .side-menu-item a:hover>i{
-            color: green;
-            display: inline-block;
-        }
-        .grid-product{
-            padding-top: 25px;
-            width: 960px;
-            height: 1180px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .item-product{
-            width: 250px;
-            height: 330px;
-            margin: 25px;
-            border-radius: 5px;
-            box-shadow: 2px 2px 2px 0px #c9c9c9;
-        }
-        .pic-pro{
-            width: 100%;
-            height: 260px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px 5px 0px 0px;
-            overflow: hidden;
-        }
-        .item-product .pic-pro img{
-            border-radius: 5px 5px 0px 0px;
-            width: 100%;
-            height: 100%;
-            vertical-align:center;
-            object-fit:cover;
-            object-position: center center;
-            transition: 0.8s;
-        }
-        .item-product:hover img{
-            transform: scale(1.1);
-        }
-        .item-product .title{
-            padding: 2px;
-            margin: 8px;
-            font-size: 20px;
-            color: rgb(67, 66, 66);
-        }
-        .item-product .price{
-            padding: 2px;
-            margin: 8px;
-            font-size: 18px;
-            color: rgb(255, 24, 24);
-            font-weight: bold;
-            font-family: 'Yaldevi', sans-serif;
-        }
-        .item-pro-touch{
-            position: relative;
-        }
-        .item-hot{
-            background-color: #fa0;
-            width: 40px;
-            height: 40px;
-            border-radius: 5px 5px 35px 35px;
-            box-shadow: 2px 2px 2px 0px #afafaf;
-            position: absolute;
-            top: -10px;
-            right: -8px;
-            font-family: 'Yaldevi', sans-serif;
-            z-index: 1;
-        }
-        .item-hot p{
-            text-align: center;
-            font-size: 26px;
-            margin-top: 5px;
-        }
-        .big-cart{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 260px;
-            border-radius: 5px 5px 0px 0px;
-            background-color: #00000065;
-            opacity: 0;
-            position: absolute;
-            transition: 0.5s;
-            z-index: 1;
-        }
-        .big-cart:hover{
-            opacity: 1;
-        }
-        .big-cart .big::before{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 900; 
-            content: "\f002";
-            font-size: 40px;
-            color: rgb(190, 190, 190);
-            margin: 10px;
-        }
-        .big-cart .cart::before{
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 900; 
-            content: "\f07a";
-            font-size: 40px;
-            color: rgb(190, 190, 190);
-            margin: 10px;
-        }
-        .footer{
-            width: 100%;
-            background-color: rgba(186, 204, 174, 1);
-        }
-        .footer-head{
-            display: flex;
-            width: 1200px;
-        }
-        .footer-item{
-            width: 0;
-            flex-grow: 1;
-            margin:10px;
-        }
-        .footer-item h3{
-            font-size: 18px;
-            color:rgb(61, 61, 61);
-            margin: 10px;
-        }
-        .footer-item a{
-            color:rgb(61, 61, 61);
-        }
-        .footer-item nav{
-            display: flex;
-            flex-direction: column;
-            margin-left: 30px;
-        }
-        .footer-item nav a{
-            font-size: 16px;
-            color:rgb(74, 74, 74);
-            margin: 5px;
-        }
-        .copyright{
-            text-align:center;
-            width: 100%;
-            color: #8a8a8a;
-        }
-        .footer-item-icon{
-            height: 60px;
-            margin: auto;
-            padding: 20px;
-        }
-        .footer-item-icon a:nth-child(1){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f09a";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-icon a:nth-child(2){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f16d";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-icon a:nth-child(3){
-            font-family: "Font Awesome 6 Free"; 
-            font-weight: 700; 
-            content: "\f3c0";
-            font-size: 50px;
-            color: rgb(126, 126, 126);
-            margin: 20px;
-        }
-        .footer-item-logo{
-            width: 80px;
-            height: 80px;
-            margin: auto;
-            margin-right: 20px;
-        }
-        .footer-item-logo img{
-            width: 100%;
-        }
-        
-        
-        </style>
+
+    <!-- ======動畫===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 <body>
     <div class="wrap">
         <div class="wrap-header">
-            <div class="header">
-                <div class="logo">
+            <input type="checkbox" name="" id="menu-switch">
+            <nav class="header">
+                <!-- logo -->
+                <h1 class="logo">
                     <a href="index.html">
                         <img src="./head/logo.png" alt="">
                     </a>
-                </div>
+                </h1>
+                <!-- 漢堡 -->
+                <label for="menu-switch" class="hb">
+                    <span class="menu-switch-menu"></span>
+                    <span class="menu-switch-menu"></span>
+                    <span class="menu-switch-menu"></span>
+                </label>
+                <!-- 選單 -->
                 <ul class="main-nav">
                     <li>
-                        <a href="hot.html"><img src="./head/icon-leaves.png" alt="">熱銷排行榜</a>
+                        <a href="hot.html">
+                            <img src="./head/icon-leaves.png" alt="">熱銷排名
+                        </a>
                     </li>
-                    <li class="main-detail">
-                        <button><img src="./head/icon-leaves.png" alt="">產品分類</button>
-                        <div class="pro-item">
-                            <a href="rice.html">主食類</a>
-                            <a href="rice.html">素料理</a>
-                            <a href="rice.html">拌醬類</a>
-                            <a href="rice.html">湯底</a>
-                            <a href="rice.html">零嘴</a>
-                        </div>
+                    <li class="sub-nav">
+                        <a href="#"><img src="./head/icon-leaves.png" alt="">產品分類</a>
+                        <!-- ========sub-nav========= -->
+                        <ol>
+                            <li>
+                                <a href="rice.html">主食類</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">素料理</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">拌醬類</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">湯底</a>
+                            </li>
+                            <li>
+                                <a href="rice.html">零嘴</a>
+                            </li>
+                        </ol>
                     </li>
                     <li>
                         <a href="place.html"><img src="./head/icon-leaves.png" alt="">門市據點</a>
@@ -427,260 +69,347 @@
                     <li>
                         <a href="news.html"><img src="./head/icon-leaves.png" alt="">最新消息</a>
                     </li>
-                    <ul class="icon-top">
-                        <li>
-                            <form action="">
-                                <label for="sea"></label>
-                                <input type="search" id="sea" placeholder="搜尋">
-                                <button><i class="fa-regular fa-magnifying-glass"></i></i></button>
-                            </form>
-                        </li>
-                        <li>
-                            <a href="shoppingcart.html">
-                                <i class="fa-regular fa-cart-shopping"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.html">
-                                <i class="fa-regular fa-user"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <a href=""><img src="./head/icon-leaves.png" alt="">網紅推薦</a>
+                    </li> 
                 </ul>
-            </div>
+                <!--=====login-user-cart-icon===== -->
+                <ul class="icon-top">
+                    <li>
+                        <form action="">
+                            <label for="sea"></label>
+                            <input type="search" id="sea" placeholder="搜尋">
+                            <button><i class="fa-regular fa-magnifying-glass"></i></i></button>
+                        </form>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="content">
-            <div class="side-menu">
-                <nav>
-                    <a href="./hot.html" class="hot-title">熱銷排行榜</a>
-                    <ul><a href="">產品分類</a>
-                    <li class="side-menu-item">
-                        <a href="rice.html"><i class="fa-regular fa-seedling"></i>主食類</a>
-                        <a href="rice.html"><i class="fa-regular fa-seedling"></i>素料理</a>
-                        <a href="rice.html"><i class="fa-regular fa-seedling"></i>拌醬類</a>
-                        <a href="rice.html"><i class="fa-regular fa-seedling"></i>湯底</a>
-                        <a href="rice.html"><i class="fa-regular fa-seedling"></i>零嘴</a>
-                    </li>
-                    </ul>
-                </nav>
+            <div class="hot-top">
+                <div class="hot-top-pic fadein">
+                    <div class="hot-top-pic-back">
+                        <img src="./product-rice/0-sau-pro-hot.jpg" alt="">
+                    </div>
+                    <div class="hot-top-pic-position">
+                        <a href="./product-detail.html" class="sausage">
+                            <img src="./product-rice/sausage2-hot.jpg" alt="">
+                        </a>
+                        <span class="crown"><i class="fa-regular fa-crown"></i></span>
+                    </div>
+                </div>
+                <div class="hot-top-txt slidein ltr">
+                    <h2 class="hot-top-txt-title one big">
+                        <a href="./product-detail.html">
+                            健康素香腸
+                        </a>
+                    </h2>
+                    <h3 class="hot-top-txt-title">
+                        正港台灣人吃的煙強，非基改大豆混合蒟蒻，非常紮實且有嚼勁傳統的古早味，每個人吃到都說讚
+                    </h3>
+                    <p class="hot-top-txt-intro">
+                        採用天然調味品，無膽固醇、無味素、無防腐劑，是老少咸宜的天然營養食品，可現切擺盤、微波加熱、煎香、加入炒飯當配料或搭配湯品用燉的增添風味，為素食主義者或提倡樂活養生的人們，帶來一個方便美味又健康的好選擇，讓您吃的更自然、更健康、更美味，絕對值得推薦與品嚐。
+                        <span class="brown"></span>
+                    </p>
+                    <div class="hot-top-b">
+                        <div class="hot-top-buy top">
+                            <a href="./product-detail.html">立即選購</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="grid-product">
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                1
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/mahua-pro2.jpg" alt="">
+            <div class="hot-mid">
+                <div class="hot-item-big">
+                    <div class="hot-item-big-pic slidein rtl">
+                        <span class="number">2</span>
+                        <a href="./product-detail.html">
+                            <img src="./product-rice/cookie-pro-hot.jpeg" alt="">
+                        </a>
+                    </div>
+                    <div class="hot-item-big-txt slidein ltr">
+                        <h2 class="hot-top-txt-title one big">
+                            <a href="./product-detail.html">
+                                素拾裸食燕麥
+                            </a>
+                            
+                        </h2>
+                        <h3 class="hot-top-txt-title">
+                            裸實燕麥正夯，最天然的方式吃進最天然的食材，沒有負擔的同時享受健康美味
+                        </h3>
+                        <p>
+                            低糖高能量，纖維含量高，健康無負擔，六種營養食材，健康大滿分，雙效分解酵素幫助消化，非基改無糖豆漿優質植物性蛋白質，黃金黑糖不甜膩，增加口感的南瓜子，營養價值高的蔓越莓，富有飽足感的嚴選大燕麥片，多種吃法，補足一天的滿滿元氣。
+                            <span class="skin"></span>
+                        </p>
+                        <div class="hot-top-b">
+                            <div class="hot-top-buy">
+                                <a href="./product-detail.html">立即選購</a>
+                            </div>
                         </div>
                     </div>
-                    <p class="title">
-                        素拾香麻醬拌麵(2包)
-                    </p>
-                    <p class="price">NT$250</p>
                 </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
+                <div class="hot-item">
+                    <div class="hot-item-intro">
+                        <div class="hot-item-pic slidein ltr">
+                            <span class="number three">3</span>
+                            <a href="./product-detail.html">
+                                <img src="./product-rice/hot-item (1).jpg" alt="">
+                            </a>
                         </div>
-                        <div class="item-hot">
-                            <p>
-                                2
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/tofu-pro2.jpeg" alt="">
+                        <div class="hot-item-txt fadein">
+                            <h2 class="hot-top-txt-title one">
+                                <a href="./product-detail.html">
+                                    老薑麻油猴頭菇
+                                </a>
+                            </h2>
+                            <p class="hot-item-txt-p">
+                                特選頂級猴頭菇<br>
+                                純正麻油與老薑結合<br>
+                                天然中藥小火慢燉
+                                <span class="yellow"></span>
+                            </p>
+                            <div class="hot-top-more up">
+                                <a href="./product-detail.html">立即選購...</a>
+                            </div>
                         </div>
                     </div>
-                    <p class="title">
-                        涮嘴麻婆豆腐(300g)
-                    </p>
-                    <p class="price">NT$160</p>
+                    <div class="hot-item-intro">
+                        <div class="hot-item-txt fadein">
+                            <h2 class="hot-top-txt-title one">
+                                <a href="./product-detail.html">
+                                    素拾香麻醬拌麵
+                                </a>
+                            </h2>
+                            <p class="hot-item-txt-p">
+                                白芝麻研磨<br>
+                                大紅袍提煉花椒油<br>
+                                嚴選日曬手摺細麵
+                                <span class="green"></span>
+                            </p>
+                            <div class="hot-top-more up">
+                                <a href="./product-detail.html">立即選購...</a>
+                            </div>
+                        </div>
+                        <div class="hot-item-pic slidein rtl">
+                            <a href="./product-detail.html">
+                                <span class="number three">4</span>
+                                <img src="./product-rice/hot-item (2).jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                3
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/bun-pro.jpg" alt="">
+                
+            </div>
+            <div class="hot-down">
+                <div class="hot-down-item">
+                    <div class="hot-down-pic fadein">
+                        <a href="./product-detail.html">
+                            <span class="number three">5</span>
+                            <img src="./product-rice/0-bun-pro.jpg" alt="">
+                        </a>
+                    </div>
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <h2 class="hot-top-txt-title one">
+                            <a href="./product-detail.html">
+                                藜麥養生包
+                            </a>
+                        </h2>
+                        <p class="hot-down-txt">
+                            外皮上一顆顆紅色的小穀物，是近年很夯的紅藜麥，穀物界的紅寶石之稱，營養價值非常高！
+                            <span class="hot-down-span">
+                                不含乳糖、麩質、膽固醇，膳食纖維高於一般穀物！能取代肉類、豆類等傳統高蛋白食物！
+                            </span>
+                        </p>
+                        <div class="hot-top-more down">
+                            <a href="./product-detail.html">立即選購...</a>
                         </div>
                     </div>
-                    <p class="title">
-                        藜麥素食養生包(10顆)
-                    </p>
-                    <p class="price">NT$200</p>
                 </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                4
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/dum-pro2.jpg" alt="">
+                <div class="hot-down-item">
+                    <div class="hot-down-pic fadein">
+                        <a href="./product-detail.html">
+                            <span class="number three">6</span>
+                            <img src="./product-rice/0-rice-pro.jpg" alt="">
+                        </a>
+                    </div>
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <h2 class="hot-top-txt-title one">
+                            <a href="./product-detail.html">
+                                養生香菇素粽
+                            </a>
+                        </h2>
+                        <p class="hot-down-txt">
+                            豐富的內餡，滿足喜愛多樣口感的你，烹煮超越想像的口味，層層工序才有的經典比例。
+    
+                            <span class="hot-down-span">
+                                每片粽葉清洗、洗糯米泡糯米、蒸糯米、糯米拌我們特製的拌醬、準備7種內餡，真的非常厚工。
+                            </span>
+                        </p>
+                        <div class="hot-top-more down">
+                            <a href="./product-detail.html">立即選購...</a>
                         </div>
                     </div>
-                    <p class="title">
-                        珍饌水餃-韭菜(30顆)
-                    </p>
-                    <p class="price">NT$250</p>
                 </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                5
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/rice-pro.jpg" alt="">
+                <div class="hot-down-item">
+                    <div class="hot-down-pic fadein">
+                        <a href="./product-detail.html">
+                            <span class="number three">7</span>
+                            <img src="./product-rice/0-dum-pro2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <h2 class="hot-top-txt-title one">
+                            
+                            <a href="./product-detail.html">
+                                珍饌韭菜水餃
+                            </a>
+                        </h2>
+                        <p class="hot-down-txt">
+                            嚴選當日新鮮蔬菜，飽滿厚實的新鮮香菇，豆香味、Q彈豆乾，用細火慢慢燉煮香素肉燥。
+                            <span class="hot-down-span">
+                                韭菜風味鮮美獨特，搭配熱量低的素肉，富含膳食纖維、鈣質及鐵質，不用沾醬就超級美味。
+                            </span>
+                        </p>
+                        <div class="hot-top-more down">
+                            <a href="./product-detail.html">立即選購...</a>
                         </div>
                     </div>
-                    <p class="title">
-                        養生香菇素粽(5顆)
-                    </p>
-                    <p class="price">NT$230</p>
                 </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                6
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/sau-pro.jpg" alt="">
+                <div class="hot-down-item">
+                    <div class="hot-down-pic fadein">
+                        <span class="number three">8</span>
+                        <a href="./product-detail.html">
+                            <img src="./product-rice/0-tofu-pro2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <h2 class="hot-top-txt-title one">
+                            <a href="./product-detail.html">
+                                涮嘴麻婆豆腐
+                            </a>
+                        </h2>
+                        <p class="hot-down-txt">
+                            鮮嫩豆腐吸飽特調川味麻婆醬汁，香辣有勁，搭配素肉末增加口感，愛吃辣的絕不能錯過。
+                            <span class="hot-down-span">
+                                選用兩種質地的非基因改造豆腐，紮食綿密，香嫩滑口，併出美妙的味蕾享受。
+                            </span>
+                        </p>
+                        <div class="hot-top-more down">
+                            <a href="./product-detail.html">立即選購...</a>
                         </div>
                     </div>
-                    <p class="title">
-                        健康素香腸(3條)
-                    </p>
-                    <p class="price">NT$120</p>
                 </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                7
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/curry-pro.jpg" alt="">
+                <div class="hot-down-item">
+                    <div class="hot-down-pic fadein">
+                        <a href="./product-detail.html">
+                            <span class="number three">9</span>
+                            <img src="./product-rice/0-curry-pro.jpg" alt="">
+                        </a>
+                    </div>
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <h2 class="hot-top-txt-title one">
+                            <a href="./product-detail.html">
+                                咖哩鮮蔬麵
+                            </a>
+                        </h2>
+                        <p class="hot-down-txt">
+                            印度的咖哩由數十種的辛香料組合而成的!咖哩麵由華人、馬來人等不同文化混合的麵食料理。
+                            <span class="hot-down-span">
+                                遵循古法手工日曬，採用台南關廟麵，精細工法，Q彈有嚼勁，絕無防腐劑。
+                            </span>
+                        </p>
+                        <div class="hot-top-more down">
+                            <a href="./product-detail.html">立即選購...</a>
                         </div>
                     </div>
-                    <p class="title">
-                        椰漿咖哩鮮蔬麵(2包)
-                    </p>
-                    <p class="price">NT$250</p>
                 </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                8
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/mush-pro.jpg" alt="">
+                <div class="hot-down-item">
+                    <div class="hot-down-pic fadein">
+                        <a href="./product-detail.html">
+                            <span class="number three">10</span>
+                            <img src="./product-rice/0-chili.jpg" alt="">
+                        </a>
+                    </div>
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <h2 class="hot-top-txt-title one">
+                            <a href="./product-detail.html">
+                                天香麻辣醬
+                            </a>
+                        </h2>
+                        <p class="hot-down-txt">
+                            閱辣無數的主廚，從味蕾裡尋找最美好的味道，數十道工序，只為層層堆疊出辣味香蘊。
+                            <span class="hot-down-span">
+                                精挑四種布農風味辣椒，辣而不嗆，麻兒不燥，濃而不膩，三種火辣美味，交織出濃郁新香快感。
+                            </span>
+                        </p>
+                        <div class="hot-top-more down">
+                            <a href="./product-detail.html">立即選購...</a>
                         </div>
                     </div>
-                    <p class="title">
-                        老薑麻油猴頭菇(300g)
-                    </p>
-                    <p class="price">NT$250</p>
-                </div>
-                <div class="item-product">
-                    <div class="item-pro-touch">
-                        <div class="big-cart">
-                            <a href="product-detail.html" class="big"></a>
-                            <a href="shoppingcart.html" class="cart"></a>
-                        </div>
-                        <div class="item-hot">
-                            <p>
-                                9
-                            </p> 
-                        </div>
-                        <div class="pic-pro">
-                            <img src="./product-rice/cookie-pro.jpeg" alt="">
-                        </div>
-                    </div>
-                    <p class="title">
-                        裸實燕麥脆片(200g)
-                    </p>
-                    <p class="price">NT$160</p>
                 </div>
             </div>
         </div>
+
+
+
         <div class="footer">
-            <div class="content">
+            <div class="container">
                 <div class="footer-head">
-                    <div class="footer-item">
-                        <h3><a href="aboutus.html">關於我們</a></h3>
-                        <nav>
-                            <a href="aboutus.html">品牌故事</a>
-                            <a href="place.html">門市據點</a>
-                        </nav>
+                    <div class="footer-head-up">
+                        <div class="footer-item">
+                            <h3><a href="aboutus.html">關於我們</a></h3>
+                            <nav>
+                                <a href="aboutus.html">品牌故事</a>
+                                <a href="place.html">門市據點</a>
+                            </nav>
+                        </div>
+                        <div class="footer-item">
+                            <h3>購物說明</h3>
+                            <nav>
+                                <a href="#">付款方式</a>
+                                <a href="#">運送方式</a>
+                            </nav>
+                        </div>
+                        <div class="footer-item">
+                            <h3>客服資訊</h3>
+                            <nav>
+                                <a href="contact.html">信箱留言</a>
+                                <a href="contact.html">聯絡我們</a>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="footer-item">
-                        <h3>購物說明</h3>
-                        <nav>
-                            <a href="#">付款方式</a>
-                            <a href="#">運送方式</a>
-                        </nav>
-                    </div>
-                    <div class="footer-item">
-                        <h3>客服資訊</h3>
-                        <nav>
-                            <a href="contact.html">信箱留言</a>
-                            <a href="contact.html">聯絡我們</a>
-                        </nav>
-                    </div>
-                    <div class="footer-item-icon">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-line"></i></a>
-                    </div>
-                    <div class="footer-item-logo">
-                        <a href="index.html">
-                            <img src="./head/logo.png" alt="">
-                        </a>
+                    <div class="footer-head-down">
+                        <div class="footer-item-icon">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-line"></i></a>
+                        </div>
+                        <div class="footer-item-logo">
+                            <a href="index.html">
+                                <img src="./head/logo.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="copyright">
@@ -690,5 +419,15 @@
         </div>
     </div>
     
+    <!-- ======字型icon======= -->
+    <script src="https://kit.fontawesome.com/22dbd1ee0c.js" crossorigin="anonymous"></script>
+
+    <!-- ======動畫===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="all.js"></script>
 </body>
 </html>
