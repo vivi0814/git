@@ -118,20 +118,24 @@
                 <div class="pro-item-detail">
                     <div class="pro-item-detail-pic">
                         <div class="pro-item-detail-pic-big">
-                            <img src="./product-detail/spicy-pro2.jpg" alt="">
+                            <img id="large" src="./product-detail/pro (2).jpg" alt="">
                         </div>
-                        <div class="pro-item-small-pic">
+
+                        <div id="smallPanel" class="pro-item-small-pic">
                             <div class="pro-item-small-pic-four">
-                                <img src="./product-detail/spicy-make.png" alt="">
+                                <img src="./product-detail/pro (1).jpg" alt="">
                             </div>
                             <div class="pro-item-small-pic-four">
-                                <img src="./product-detail/spicy-make2.jpg" alt="">
+                                <img src="./product-detail/pro (2).jpg" alt="">
                             </div>
                             <div class="pro-item-small-pic-four">
-                                <img src="./product-detail/spicy-prooo.jpg" alt="">
+                                <img src="./product-detail/pro (3).jpg" alt="">
                             </div>
                             <div class="pro-item-small-pic-four">
-                                <img src="./product-detail/spicy-proo.jpeg" alt="">
+                                <img src="./product-detail/pro (4).jpg" alt="">
+                            </div>
+                            <div class="pro-item-small-pic-four">
+                                <img src="./product-detail/pro (5).jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -150,7 +154,9 @@
                             只為層層堆疊辣味香蘊
                         </p>
                         <div class="pro-detail-amount">
-                            <p><span class="minus"><i class="fa-regular fa-minus"></i></span>1<span class="plus"><i class="fa-regular fa-plus"></i></span></p>
+                            <input type="button" class="btnMinus" value="-">
+                            <input type="text" class="qty" size="4" value="0">
+                            <input type="button" class="btnPlus" value="+">	
                         </div>
                         <p class="pro-detail-price">NT$230</p>
                         <div class="price-cart-buy">
@@ -382,6 +388,23 @@
     </script>
 
     <script src="all.js"></script>
+
+    <script>
+        function showLarge(e){//換大圖
+            let small = e.target;
+            document.getElementById("large").src = small.src;
+        }
+
+        function init(){
+            //註冊小圖可以點按後換大圖
+            let imgs = document.querySelectorAll("#smallPanel img");
+            for(let i=0; i<imgs.length; i++){
+                imgs[i].onclick = showLarge;
+            }
+        }
+
+        window.addEventListener("load", init, false);
+    </script>
 
 </body>
 </html>

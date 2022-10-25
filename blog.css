@@ -47,6 +47,7 @@ hr.style-cart{
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
+    box-shadow: 2px 2px 2px 0px #c9c9c9;
     /* box-shadow: 0 5px 202px rgba(0,0,0,0.5); */
     transition: .3s ease-in-out;
     border-radius: 5px;
@@ -73,7 +74,7 @@ hr.style-cart{
 
 .content-big .card .card-txt{
     position: relative;
-    margin-top: -140px;
+    margin-top: -200px;
     padding: 10px;
     visibility: hidden;
     opacity: 0;
@@ -82,10 +83,24 @@ hr.style-cart{
 .content-big .card:hover .card-txt{
     visibility: visible;
     opacity: 1;
-    margin-top: -40px;
+    margin-top: -65px;
     transition-delay: .3s;
 }
-.card-txt h3{
+.card-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.card-people{
+    width: 20%;
+}
+.card-people img{
+    width: 100%;
+    border-radius: 50%;
+}
+.card-title h3{
+    /* padding-bottom: 20px; */
     font-size: 20px;
     color: rgb(60, 60, 60);
     text-align: center;

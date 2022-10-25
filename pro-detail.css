@@ -91,7 +91,7 @@
 
 }
 .pro-item-small-pic-four{
-    width: 20%;
+    width: 15%;
     /* width: 100px; */
     /* height: 70px; */
     margin: 5px;
@@ -140,13 +140,25 @@
 }
 .pro-detail-amount{
     width: 60%;
-    padding: 10px 0px;
+    padding: 10px;
     text-align: center;
-    /* margin-top: 20px; */
+    display: flex;
+    justify-content: space-evenly;
+
     margin: auto;
     font-size: 30px;
     border: 1px solid grey;
     border-radius: 5px;
+}
+.pro-detail-amount input{
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+.pro-detail-amount .btnMinus, .pro-detail-amount .btnPlus{
+    text-align: center;
+    font-size: 25px;
 }
 .pro-detail-price{
     width: 95%;
@@ -157,26 +169,7 @@
     font-weight: bold;
     text-align: center;
 }
-.pro-detail-amount span{
-    cursor: pointer;
-    /* margin: 0px 80px; */
-}
-.pro-detail-amount .minus i{
-    font-family: "Font Awesome 6 Free"; 
-    font-weight: 700; 
-    content: "\f068";
-    font-size: 15px;
-    color: rgb(117, 116, 116);
-    margin: 0px 80px 0px 5px;
-}
-.pro-detail-amount .plus i{
-    font-family: "Font Awesome 6 Free"; 
-    font-weight: 700; 
-    content: "\2b";
-    font-size: 15px;
-    color: rgb(117, 116, 116);
-    margin: 0px 5px 0px 80px;
-}
+
 .price-cart-buy{
     display: flex;
     flex-wrap: wrap;
@@ -245,7 +238,7 @@
     /* justify-content: center; */
     align-items: flex-end;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .pro-item-detail-make-pic{
     width: 80%;
@@ -543,7 +536,7 @@
         display: none;
     }
     .pro-detail-amount{
-        width: 100%;
+        width: 80%;
         padding: 10px 0px;
         text-align: center;
         margin-top: 20px;
@@ -558,10 +551,7 @@
         font-weight: bold;
         text-align: center;
     }
-    .pro-detail-amount span{
-        cursor: pointer;
-        margin: 0px 30px;
-    }
+    
     .pro-item-detail-make{
         width: 960px;
         display: flex;
