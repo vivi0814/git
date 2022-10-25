@@ -21,6 +21,12 @@
 .swiper-button-next, .swiper-button-prev{
     color: rgb(54, 99, 24);
 }
+.swiper .swiper-button-next, .swiper .swiper-button-prev{
+    color:rgb(250, 207, 98);
+}
+.swiper .swiper-pagination-bullet{
+    background: rgb(250, 207, 98);
+}
 
 /* ==============section-hot================= */
 .container{

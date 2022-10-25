@@ -96,19 +96,19 @@
 }
 .dropdown{
     left: -100%;
-    width: 99%;
+    width: 50%;
     top: 100%;
     opacity: 0;
     text-align: center;
     padding: 5px;
     position: absolute;
-    background-color: rgb(255, 193, 70);
+    background-color: rgb(249, 204, 115);
     border-radius: 5px;
     z-index: 5;
     transition: left 0s 0.8s, opacity 1s 0s ;
 }
 #menu-big:checked + .menu .dropdown{
-    left: 0%;
+    left: 25%;
     opacity: 0.9;
     transition: opacity 1s ;
     /* display: block; */
@@ -119,26 +119,12 @@
 }
 .dropdown a:hover{
     font-weight: bold;
+    text-decoration: underline;
 }
 .dropdown li{
-    margin: 10px;
+    margin: 15px;
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .grid-product{
     padding-top: 5px;
@@ -230,6 +216,7 @@
     width: 100%;
     margin: auto;
     text-align: center;
+    margin-bottom: 20px;
 }
 .category-pages a{
     margin: 25px;

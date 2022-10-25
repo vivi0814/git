@@ -402,10 +402,10 @@
 .swiper-slide {
     display: flex;
 }
-.swiper-button-next, .swiper-button-prev{
+.swiper .swiper-button-next, .swiper .swiper-button-prev{
     color:rgb(250, 207, 98);
 }
-.swiper-pagination-bullet{
+.swiper .swiper-pagination-bullet{
     background: rgb(250, 207, 98);
 }
 

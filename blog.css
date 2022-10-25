@@ -1,0 +1,122 @@
+.wrap{
+    overflow: hidden;
+}
+.video-blog{
+    width: 100%;
+    aspect-ratio: 15/8;
+}
+video{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+.container h2{
+    font-size: 30px;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+hr.style-cart{
+    width: 40%;
+    margin-left: 50px;
+    height: 2px;
+    border: 0;
+    margin-top: 4px;
+    background-color: rgba(151, 151, 151, 0.75);
+}
+.content-big{
+    padding-top: 50px;
+    position: relative;
+    /* height: 600px; */
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.content-big .card{
+    margin-top: 100px;
+    position: relative;
+    max-width: 300px;
+    margin: 50px 10px;
+    height: 220px;
+    background: #FFD488;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0 5px 202px rgba(0,0,0,0.5); */
+    transition: .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.content-big .card:hover{
+    height: 350px;
+}
+
+.content-big .card .imgBx{
+    position: relative;
+    width: 260px;
+    height: 220px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.content-big .card .imgBx img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.content-big .card .card-txt{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.content-big .card:hover .card-txt{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;
+}
+.card-txt h3{
+    font-size: 20px;
+    color: rgb(60, 60, 60);
+    text-align: center;
+}
+.card-txt p{
+    font-size: 18px;
+    color: rgb(82, 81, 81);
+    margin: 10px;
+    text-align: start;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+
+
+
+@media screen and (max-width:767px) {
+    
+}
+
+@media screen and (min-width:768px){
+    hr.style-cart{
+        width: 20%;
+    }
+    .content-big .card{
+        margin: 50px 30px;
+    }
+    
+}
+@media screen and (min-width:1200px){
+    .content-big .card{
+        margin: 50px 50px;
+    }
+}
