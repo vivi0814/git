@@ -18,14 +18,14 @@
     object-fit: cover;
     object-position: middle;
 }
-.swiper-button-next, .swiper-button-prev{
+/* .swiper-button-next, .swiper-button-prev{
     color: rgb(54, 99, 24);
-}
+} */
 .swiper .swiper-button-next, .swiper .swiper-button-prev{
-    color:rgb(250, 207, 98);
+    color:rgb(65, 65, 65);
 }
 .swiper .swiper-pagination-bullet{
-    background: rgb(250, 207, 98);
+    background: rgb(65, 65, 65);
 }
 
 /* ==============section-hot================= */
@@ -440,7 +440,10 @@
 
 
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:767px) {   
+    .banner{
+        padding-top: 10px;
+    }
     /* ===========section-hot============== */
     .sf{
         flex-direction: column;
