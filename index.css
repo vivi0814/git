@@ -22,10 +22,10 @@
     color: rgb(54, 99, 24);
 } */
 .swiper .swiper-button-next, .swiper .swiper-button-prev{
-    color:rgb(65, 65, 65);
+    color:rgb(104, 104, 104);
 }
 .swiper .swiper-pagination-bullet{
-    background: rgb(65, 65, 65);
+    background: rgb(104, 104, 104);
 }
 
 /* ==============section-hot================= */
