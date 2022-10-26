@@ -200,6 +200,9 @@ hr.style-one{
     .cart-pay-now a{
         font-size: 25px;
     }
+    .cart-item-list-amount input{
+        font-size: 25px;
+    }
 }
 @media screen and (min-width:1200px){
     .container h2{
