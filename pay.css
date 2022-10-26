@@ -37,7 +37,7 @@ hr.style-one{
     width: 100%;
 }
 .cart-item-list{
-    width: 95%;
+    width: 96%;
     display: flex;
     background-color: rgba(253, 230, 189, 0.6);
     border-radius: 20px;
@@ -63,7 +63,24 @@ hr.style-one{
 .cart-item-list-name a{
     color:rgb(117, 116, 116);
 }
-.cart-item-list-amount span{
+.cart-item-list-amount{
+    display: flex;
+}
+
+.cart-item-list-amount input{
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color:rgb(117, 116, 116);
+}
+.cart-item-list-amount .btnMinus, .cart-item-list-amount .btnPlus{
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* .cart-item-list-amount span{
     margin: 0px 10px;
     cursor: pointer;
 }
@@ -80,7 +97,7 @@ hr.style-one{
     content: "\2b";
     font-size: 10px;
     color: rgba(103, 103, 103, 1);
-}
+} */
 .cart-total{
     width: 95%;
     display: flex;
